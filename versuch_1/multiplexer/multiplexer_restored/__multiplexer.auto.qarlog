@@ -1,0 +1,49 @@
+Quartus II Archive log --	D:/Eigene_Dateien/Lehrbetrieb/TI/Praktikum/ALTERA/_neu/Versuch_1_VHDL/MUX_x0002/__multiplexer.auto.qarlog
+
+Archive:	D:/Eigene_Dateien/Lehrbetrieb/TI/Praktikum/ALTERA/_neu/Versuch_1_VHDL/MUX_x0002/__multiplexer.auto.qar
+Date:		Thu Oct 05 09:24:10 2017
+Quartus II 64-Bit		13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition
+
+	=========== Files Selected: ===========
+D:/Eigene_Dateien/Lehrbetrieb/TI/Praktikum/ALTERA/_neu/Versuch_1_VHDL/MUX_x0002/db/altsyncram_kp14.tdf
+D:/Eigene_Dateien/Lehrbetrieb/TI/Praktikum/ALTERA/_neu/Versuch_1_VHDL/MUX_x0002/db/cmpr_5cc.tdf
+D:/Eigene_Dateien/Lehrbetrieb/TI/Praktikum/ALTERA/_neu/Versuch_1_VHDL/MUX_x0002/db/cmpr_8cc.tdf
+D:/Eigene_Dateien/Lehrbetrieb/TI/Praktikum/ALTERA/_neu/Versuch_1_VHDL/MUX_x0002/db/cntr_02j.tdf
+D:/Eigene_Dateien/Lehrbetrieb/TI/Praktikum/ALTERA/_neu/Versuch_1_VHDL/MUX_x0002/db/cntr_gui.tdf
+D:/Eigene_Dateien/Lehrbetrieb/TI/Praktikum/ALTERA/_neu/Versuch_1_VHDL/MUX_x0002/db/cntr_pbi.tdf
+D:/Eigene_Dateien/Lehrbetrieb/TI/Praktikum/ALTERA/_neu/Versuch_1_VHDL/MUX_x0002/db/cntr_sbi.tdf
+D:/Eigene_Dateien/Lehrbetrieb/TI/Praktikum/ALTERA/_neu/Versuch_1_VHDL/MUX_x0002/db/decode_rqf.tdf
+D:/Eigene_Dateien/Lehrbetrieb/TI/Praktikum/ALTERA/_neu/Versuch_1_VHDL/MUX_x0002/db/multiplexer.cbx.xml
+D:/Eigene_Dateien/Lehrbetrieb/TI/Praktikum/ALTERA/_neu/Versuch_1_VHDL/MUX_x0002/db/multiplexer.qpf
+D:/Eigene_Dateien/Lehrbetrieb/TI/Praktikum/ALTERA/_neu/Versuch_1_VHDL/MUX_x0002/db/mux_aoc.tdf
+D:/Eigene_Dateien/Lehrbetrieb/TI/Praktikum/ALTERA/_neu/Versuch_1_VHDL/MUX_x0002/multiplexer.vhd
+D:/Eigene_Dateien/Lehrbetrieb/TI/Praktikum/ALTERA/_neu/Versuch_1_VHDL/MUX_x0002/output_files/multiplexer.archive.rpt
+D:/Eigene_Dateien/Lehrbetrieb/TI/Praktikum/ALTERA/_neu/Versuch_1_VHDL/MUX_x0002/output_files/multiplexer.asm.rpt
+D:/Eigene_Dateien/Lehrbetrieb/TI/Praktikum/ALTERA/_neu/Versuch_1_VHDL/MUX_x0002/output_files/multiplexer.cdf
+D:/Eigene_Dateien/Lehrbetrieb/TI/Praktikum/ALTERA/_neu/Versuch_1_VHDL/MUX_x0002/output_files/multiplexer.done
+D:/Eigene_Dateien/Lehrbetrieb/TI/Praktikum/ALTERA/_neu/Versuch_1_VHDL/MUX_x0002/output_files/multiplexer.fit.rpt
+D:/Eigene_Dateien/Lehrbetrieb/TI/Praktikum/ALTERA/_neu/Versuch_1_VHDL/MUX_x0002/output_files/multiplexer.fit.smsg
+D:/Eigene_Dateien/Lehrbetrieb/TI/Praktikum/ALTERA/_neu/Versuch_1_VHDL/MUX_x0002/output_files/multiplexer.fit.summary
+D:/Eigene_Dateien/Lehrbetrieb/TI/Praktikum/ALTERA/_neu/Versuch_1_VHDL/MUX_x0002/output_files/multiplexer.flow.rpt
+D:/Eigene_Dateien/Lehrbetrieb/TI/Praktikum/ALTERA/_neu/Versuch_1_VHDL/MUX_x0002/output_files/multiplexer.jdi
+D:/Eigene_Dateien/Lehrbetrieb/TI/Praktikum/ALTERA/_neu/Versuch_1_VHDL/MUX_x0002/output_files/multiplexer.map.rpt
+D:/Eigene_Dateien/Lehrbetrieb/TI/Praktikum/ALTERA/_neu/Versuch_1_VHDL/MUX_x0002/output_files/multiplexer.map.summary
+D:/Eigene_Dateien/Lehrbetrieb/TI/Praktikum/ALTERA/_neu/Versuch_1_VHDL/MUX_x0002/output_files/multiplexer.pin
+D:/Eigene_Dateien/Lehrbetrieb/TI/Praktikum/ALTERA/_neu/Versuch_1_VHDL/MUX_x0002/output_files/multiplexer.pof
+D:/Eigene_Dateien/Lehrbetrieb/TI/Praktikum/ALTERA/_neu/Versuch_1_VHDL/MUX_x0002/output_files/multiplexer.restore.rpt
+D:/Eigene_Dateien/Lehrbetrieb/TI/Praktikum/ALTERA/_neu/Versuch_1_VHDL/MUX_x0002/output_files/multiplexer.sof
+D:/Eigene_Dateien/Lehrbetrieb/TI/Praktikum/ALTERA/_neu/Versuch_1_VHDL/MUX_x0002/output_files/multiplexer.sta.rpt
+D:/Eigene_Dateien/Lehrbetrieb/TI/Praktikum/ALTERA/_neu/Versuch_1_VHDL/MUX_x0002/output_files/multiplexer.sta.summary
+__multiplexer.auto.qarlog
+arc_file_list_temp.tmp.txt
+assignment_defaults.qdf
+c:/altera/13.0sp1/quartus/libraries/vhdl/ieee/prmtvs_b.vhd
+c:/altera/13.0sp1/quartus/libraries/vhdl/ieee/prmtvs_p.vhd
+c:/altera/13.0sp1/quartus/libraries/vhdl/ieee/timing_b.vhd
+c:/altera/13.0sp1/quartus/libraries/vhdl/ieee/timing_p.vhd
+multiplexer.qarlog
+multiplexer.qsf
+	======= Total: 38 files to archive =======
+
+	================ Status: ===============
+All files archived successfully.

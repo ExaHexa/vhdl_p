@@ -1,0 +1,19 @@
+-- 1:8 DEMUX
+-- Ergänzen Sie die fehlenden Programmteile
+
+library ieee;
+use ieee.std_logic_1164.all;
+
+
+entity demultiplexer is 
+
+	port(
+		a:		in std_logic;							-- a = SW0 (rechter Schalter) 
+		s:		in std_logic_vector(2 downto 0); -- s2 = KEY2 ..... s0 = KEY0			
+		x:		out std_logic_vector(7 downto 0) -- LEDG7....LEDG0
+	);
+
+end demultiplexer;
+
+
+

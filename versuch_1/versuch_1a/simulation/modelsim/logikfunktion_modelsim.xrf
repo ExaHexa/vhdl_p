@@ -1,0 +1,14 @@
+vendor_name = ModelSim
+source_file = 1, /home/exahexa/FH/TI/TI_Praktikum/versuch_1/versuch_1a/Vhdl1.vhd
+source_file = 1, /home/exahexa/FH/TI/TI_Praktikum/versuch_1/versuch_1a/Waveform.vwf
+source_file = 1, /home/exahexa/FH/TI/TI_Praktikum/versuch_1/versuch_1a/db/logikfunktion.cbx.xml
+source_file = 1, /home/exahexa/.altera/13.0sp1/quartus/libraries/vhdl/ieee/prmtvs_b.vhd
+source_file = 1, /home/exahexa/.altera/13.0sp1/quartus/libraries/vhdl/ieee/prmtvs_p.vhd
+source_file = 1, /home/exahexa/.altera/13.0sp1/quartus/libraries/vhdl/ieee/timing_b.vhd
+source_file = 1, /home/exahexa/.altera/13.0sp1/quartus/libraries/vhdl/ieee/timing_p.vhd
+design_name = logikfunktion
+instance = comp, \X[1]~I , X[1], logikfunktion, 1
+instance = comp, \X[0]~I , X[0], logikfunktion, 1
+instance = comp, \X[2]~I , X[2], logikfunktion, 1
+instance = comp, \Y~0 , Y~0, logikfunktion, 1
+instance = comp, \Y~I , Y, logikfunktion, 1

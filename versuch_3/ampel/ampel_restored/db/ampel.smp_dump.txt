@@ -1,0 +1,11 @@
+
+State Machine - |ampel|main_state
+Name main_state.wait_for_idle main_state.r_ro_r main_state.r_r_g main_state.r_r_r main_state.r_o_r main_state.r_g_r main_state.idle main_state.reset 
+main_state.reset 0 0 0 0 0 0 0 0 
+main_state.idle 0 0 0 0 0 0 1 1 
+main_state.r_g_r 0 0 0 0 0 1 0 1 
+main_state.r_o_r 0 0 0 0 1 0 0 1 
+main_state.r_r_r 0 0 0 1 0 0 0 1 
+main_state.r_r_g 0 0 1 0 0 0 0 1 
+main_state.r_ro_r 0 1 0 0 0 0 0 1 
+main_state.wait_for_idle 1 0 0 0 0 0 0 1 

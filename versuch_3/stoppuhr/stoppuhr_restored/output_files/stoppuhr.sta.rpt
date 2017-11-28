@@ -1,0 +1,1257 @@
+TimeQuest Timing Analyzer report for stoppuhr
+Wed Nov 22 13:48:13 2017
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. TimeQuest Timing Analyzer Summary
+  3. Parallel Compilation
+  4. Clocks
+  5. Slow Model Fmax Summary
+  6. Slow Model Setup Summary
+  7. Slow Model Hold Summary
+  8. Slow Model Recovery Summary
+  9. Slow Model Removal Summary
+ 10. Slow Model Minimum Pulse Width Summary
+ 11. Slow Model Setup: 'clk'
+ 12. Slow Model Hold: 'clk'
+ 13. Slow Model Minimum Pulse Width: 'clk'
+ 14. Setup Times
+ 15. Hold Times
+ 16. Clock to Output Times
+ 17. Minimum Clock to Output Times
+ 18. Fast Model Setup Summary
+ 19. Fast Model Hold Summary
+ 20. Fast Model Recovery Summary
+ 21. Fast Model Removal Summary
+ 22. Fast Model Minimum Pulse Width Summary
+ 23. Fast Model Setup: 'clk'
+ 24. Fast Model Hold: 'clk'
+ 25. Fast Model Minimum Pulse Width: 'clk'
+ 26. Setup Times
+ 27. Hold Times
+ 28. Clock to Output Times
+ 29. Minimum Clock to Output Times
+ 30. Multicorner Timing Analysis Summary
+ 31. Setup Times
+ 32. Hold Times
+ 33. Clock to Output Times
+ 34. Minimum Clock to Output Times
+ 35. Setup Transfers
+ 36. Hold Transfers
+ 37. Report TCCS
+ 38. Report RSKM
+ 39. Unconstrained Paths
+ 40. TimeQuest Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------------------+
+; TimeQuest Timing Analyzer Summary                                                      ;
++--------------------+-------------------------------------------------------------------+
+; Quartus II Version ; Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition ;
+; Revision Name      ; stoppuhr                                                          ;
+; Device Family      ; Cyclone II                                                        ;
+; Device Name        ; EP2C20F484C7                                                      ;
+; Timing Models      ; Final                                                             ;
+; Delay Model        ; Combined                                                          ;
+; Rise/Fall Delays   ; Unavailable                                                       ;
++--------------------+-------------------------------------------------------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 2      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                          ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
+; Clock Name ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
+; clk        ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { clk } ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
+
+
++--------------------------------------------------+
+; Slow Model Fmax Summary                          ;
++------------+-----------------+------------+------+
+; Fmax       ; Restricted Fmax ; Clock Name ; Note ;
++------------+-----------------+------------+------+
+; 233.81 MHz ; 233.81 MHz      ; clk        ;      ;
++------------+-----------------+------------+------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++--------------------------------+
+; Slow Model Setup Summary       ;
++-------+--------+---------------+
+; Clock ; Slack  ; End Point TNS ;
++-------+--------+---------------+
+; clk   ; -3.277 ; -144.085      ;
++-------+--------+---------------+
+
+
++-------------------------------+
+; Slow Model Hold Summary       ;
++-------+-------+---------------+
+; Clock ; Slack ; End Point TNS ;
++-------+-------+---------------+
+; clk   ; 0.445 ; 0.000         ;
++-------+-------+---------------+
+
+
+-------------------------------
+; Slow Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Slow Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
++----------------------------------------+
+; Slow Model Minimum Pulse Width Summary ;
++-------+--------+-----------------------+
+; Clock ; Slack  ; End Point TNS         ;
++-------+--------+-----------------------+
+; clk   ; -1.631 ; -61.509               ;
++-------+--------+-----------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Setup: 'clk'                                                                                                                ;
++--------+----------------------------+----------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                  ; To Node                    ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+----------------------------+----------------------------+--------------+-------------+--------------+------------+------------+
+; -3.277 ; stoppuhr_bcd:inst|temp[5]  ; stoppuhr_bcd:inst|s2[1]    ; clk          ; clk         ; 1.000        ; -0.008     ; 4.307      ;
+; -3.277 ; stoppuhr_bcd:inst|temp[5]  ; stoppuhr_bcd:inst|s2[0]    ; clk          ; clk         ; 1.000        ; -0.008     ; 4.307      ;
+; -3.277 ; stoppuhr_bcd:inst|temp[5]  ; stoppuhr_bcd:inst|s2[2]    ; clk          ; clk         ; 1.000        ; -0.008     ; 4.307      ;
+; -3.238 ; stoppuhr_bcd:inst|temp[7]  ; stoppuhr_bcd:inst|s2[1]    ; clk          ; clk         ; 1.000        ; -0.008     ; 4.268      ;
+; -3.238 ; stoppuhr_bcd:inst|temp[7]  ; stoppuhr_bcd:inst|s2[0]    ; clk          ; clk         ; 1.000        ; -0.008     ; 4.268      ;
+; -3.238 ; stoppuhr_bcd:inst|temp[7]  ; stoppuhr_bcd:inst|s2[2]    ; clk          ; clk         ; 1.000        ; -0.008     ; 4.268      ;
+; -3.215 ; stoppuhr_bcd:inst|temp[8]  ; stoppuhr_bcd:inst|s2[1]    ; clk          ; clk         ; 1.000        ; -0.008     ; 4.245      ;
+; -3.215 ; stoppuhr_bcd:inst|temp[8]  ; stoppuhr_bcd:inst|s2[0]    ; clk          ; clk         ; 1.000        ; -0.008     ; 4.245      ;
+; -3.215 ; stoppuhr_bcd:inst|temp[8]  ; stoppuhr_bcd:inst|s2[2]    ; clk          ; clk         ; 1.000        ; -0.008     ; 4.245      ;
+; -3.121 ; stoppuhr_bcd:inst|temp[5]  ; stoppuhr_bcd:inst|ms2[2]   ; clk          ; clk         ; 1.000        ; -0.001     ; 4.158      ;
+; -3.121 ; stoppuhr_bcd:inst|temp[5]  ; stoppuhr_bcd:inst|ms2[0]   ; clk          ; clk         ; 1.000        ; -0.001     ; 4.158      ;
+; -3.121 ; stoppuhr_bcd:inst|temp[5]  ; stoppuhr_bcd:inst|ms2[1]   ; clk          ; clk         ; 1.000        ; -0.001     ; 4.158      ;
+; -3.121 ; stoppuhr_bcd:inst|temp[5]  ; stoppuhr_bcd:inst|ms2[3]   ; clk          ; clk         ; 1.000        ; -0.001     ; 4.158      ;
+; -3.108 ; stoppuhr_bcd:inst|temp[5]  ; stoppuhr_bcd:inst|temp[0]  ; clk          ; clk         ; 1.000        ; 0.000      ; 4.146      ;
+; -3.108 ; stoppuhr_bcd:inst|temp[5]  ; stoppuhr_bcd:inst|temp[1]  ; clk          ; clk         ; 1.000        ; 0.000      ; 4.146      ;
+; -3.108 ; stoppuhr_bcd:inst|temp[5]  ; stoppuhr_bcd:inst|temp[2]  ; clk          ; clk         ; 1.000        ; 0.000      ; 4.146      ;
+; -3.108 ; stoppuhr_bcd:inst|temp[5]  ; stoppuhr_bcd:inst|temp[3]  ; clk          ; clk         ; 1.000        ; 0.000      ; 4.146      ;
+; -3.108 ; stoppuhr_bcd:inst|temp[5]  ; stoppuhr_bcd:inst|temp[4]  ; clk          ; clk         ; 1.000        ; 0.000      ; 4.146      ;
+; -3.108 ; stoppuhr_bcd:inst|temp[5]  ; stoppuhr_bcd:inst|temp[5]  ; clk          ; clk         ; 1.000        ; 0.000      ; 4.146      ;
+; -3.108 ; stoppuhr_bcd:inst|temp[5]  ; stoppuhr_bcd:inst|temp[6]  ; clk          ; clk         ; 1.000        ; 0.000      ; 4.146      ;
+; -3.108 ; stoppuhr_bcd:inst|temp[5]  ; stoppuhr_bcd:inst|temp[7]  ; clk          ; clk         ; 1.000        ; 0.000      ; 4.146      ;
+; -3.108 ; stoppuhr_bcd:inst|temp[5]  ; stoppuhr_bcd:inst|temp[8]  ; clk          ; clk         ; 1.000        ; 0.000      ; 4.146      ;
+; -3.082 ; stoppuhr_bcd:inst|temp[7]  ; stoppuhr_bcd:inst|ms2[2]   ; clk          ; clk         ; 1.000        ; -0.001     ; 4.119      ;
+; -3.082 ; stoppuhr_bcd:inst|temp[7]  ; stoppuhr_bcd:inst|ms2[0]   ; clk          ; clk         ; 1.000        ; -0.001     ; 4.119      ;
+; -3.082 ; stoppuhr_bcd:inst|temp[7]  ; stoppuhr_bcd:inst|ms2[1]   ; clk          ; clk         ; 1.000        ; -0.001     ; 4.119      ;
+; -3.082 ; stoppuhr_bcd:inst|temp[7]  ; stoppuhr_bcd:inst|ms2[3]   ; clk          ; clk         ; 1.000        ; -0.001     ; 4.119      ;
+; -3.069 ; stoppuhr_bcd:inst|temp[7]  ; stoppuhr_bcd:inst|temp[0]  ; clk          ; clk         ; 1.000        ; 0.000      ; 4.107      ;
+; -3.069 ; stoppuhr_bcd:inst|temp[7]  ; stoppuhr_bcd:inst|temp[1]  ; clk          ; clk         ; 1.000        ; 0.000      ; 4.107      ;
+; -3.069 ; stoppuhr_bcd:inst|temp[7]  ; stoppuhr_bcd:inst|temp[2]  ; clk          ; clk         ; 1.000        ; 0.000      ; 4.107      ;
+; -3.069 ; stoppuhr_bcd:inst|temp[7]  ; stoppuhr_bcd:inst|temp[3]  ; clk          ; clk         ; 1.000        ; 0.000      ; 4.107      ;
+; -3.069 ; stoppuhr_bcd:inst|temp[7]  ; stoppuhr_bcd:inst|temp[4]  ; clk          ; clk         ; 1.000        ; 0.000      ; 4.107      ;
+; -3.069 ; stoppuhr_bcd:inst|temp[7]  ; stoppuhr_bcd:inst|temp[5]  ; clk          ; clk         ; 1.000        ; 0.000      ; 4.107      ;
+; -3.069 ; stoppuhr_bcd:inst|temp[7]  ; stoppuhr_bcd:inst|temp[6]  ; clk          ; clk         ; 1.000        ; 0.000      ; 4.107      ;
+; -3.069 ; stoppuhr_bcd:inst|temp[7]  ; stoppuhr_bcd:inst|temp[7]  ; clk          ; clk         ; 1.000        ; 0.000      ; 4.107      ;
+; -3.069 ; stoppuhr_bcd:inst|temp[7]  ; stoppuhr_bcd:inst|temp[8]  ; clk          ; clk         ; 1.000        ; 0.000      ; 4.107      ;
+; -3.059 ; stoppuhr_bcd:inst|temp[8]  ; stoppuhr_bcd:inst|ms2[2]   ; clk          ; clk         ; 1.000        ; -0.001     ; 4.096      ;
+; -3.059 ; stoppuhr_bcd:inst|temp[8]  ; stoppuhr_bcd:inst|ms2[0]   ; clk          ; clk         ; 1.000        ; -0.001     ; 4.096      ;
+; -3.059 ; stoppuhr_bcd:inst|temp[8]  ; stoppuhr_bcd:inst|ms2[1]   ; clk          ; clk         ; 1.000        ; -0.001     ; 4.096      ;
+; -3.059 ; stoppuhr_bcd:inst|temp[8]  ; stoppuhr_bcd:inst|ms2[3]   ; clk          ; clk         ; 1.000        ; -0.001     ; 4.096      ;
+; -3.046 ; stoppuhr_bcd:inst|temp[8]  ; stoppuhr_bcd:inst|temp[0]  ; clk          ; clk         ; 1.000        ; 0.000      ; 4.084      ;
+; -3.046 ; stoppuhr_bcd:inst|temp[8]  ; stoppuhr_bcd:inst|temp[1]  ; clk          ; clk         ; 1.000        ; 0.000      ; 4.084      ;
+; -3.046 ; stoppuhr_bcd:inst|temp[8]  ; stoppuhr_bcd:inst|temp[2]  ; clk          ; clk         ; 1.000        ; 0.000      ; 4.084      ;
+; -3.046 ; stoppuhr_bcd:inst|temp[8]  ; stoppuhr_bcd:inst|temp[3]  ; clk          ; clk         ; 1.000        ; 0.000      ; 4.084      ;
+; -3.046 ; stoppuhr_bcd:inst|temp[8]  ; stoppuhr_bcd:inst|temp[4]  ; clk          ; clk         ; 1.000        ; 0.000      ; 4.084      ;
+; -3.046 ; stoppuhr_bcd:inst|temp[8]  ; stoppuhr_bcd:inst|temp[5]  ; clk          ; clk         ; 1.000        ; 0.000      ; 4.084      ;
+; -3.046 ; stoppuhr_bcd:inst|temp[8]  ; stoppuhr_bcd:inst|temp[6]  ; clk          ; clk         ; 1.000        ; 0.000      ; 4.084      ;
+; -3.046 ; stoppuhr_bcd:inst|temp[8]  ; stoppuhr_bcd:inst|temp[7]  ; clk          ; clk         ; 1.000        ; 0.000      ; 4.084      ;
+; -3.046 ; stoppuhr_bcd:inst|temp[8]  ; stoppuhr_bcd:inst|temp[8]  ; clk          ; clk         ; 1.000        ; 0.000      ; 4.084      ;
+; -3.011 ; stoppuhr_bcd:inst|temp[15] ; stoppuhr_bcd:inst|s2[1]    ; clk          ; clk         ; 1.000        ; -0.004     ; 4.045      ;
+; -3.011 ; stoppuhr_bcd:inst|temp[15] ; stoppuhr_bcd:inst|s2[0]    ; clk          ; clk         ; 1.000        ; -0.004     ; 4.045      ;
+; -3.011 ; stoppuhr_bcd:inst|temp[15] ; stoppuhr_bcd:inst|s2[2]    ; clk          ; clk         ; 1.000        ; -0.004     ; 4.045      ;
+; -2.984 ; stoppuhr_bcd:inst|temp[12] ; stoppuhr_bcd:inst|s2[1]    ; clk          ; clk         ; 1.000        ; -0.004     ; 4.018      ;
+; -2.984 ; stoppuhr_bcd:inst|temp[12] ; stoppuhr_bcd:inst|s2[0]    ; clk          ; clk         ; 1.000        ; -0.004     ; 4.018      ;
+; -2.984 ; stoppuhr_bcd:inst|temp[12] ; stoppuhr_bcd:inst|s2[2]    ; clk          ; clk         ; 1.000        ; -0.004     ; 4.018      ;
+; -2.980 ; stoppuhr_bcd:inst|temp[5]  ; stoppuhr_bcd:inst|s1[1]    ; clk          ; clk         ; 1.000        ; -0.005     ; 4.013      ;
+; -2.980 ; stoppuhr_bcd:inst|temp[5]  ; stoppuhr_bcd:inst|s1[0]    ; clk          ; clk         ; 1.000        ; -0.005     ; 4.013      ;
+; -2.980 ; stoppuhr_bcd:inst|temp[5]  ; stoppuhr_bcd:inst|s1[3]    ; clk          ; clk         ; 1.000        ; -0.005     ; 4.013      ;
+; -2.980 ; stoppuhr_bcd:inst|temp[5]  ; stoppuhr_bcd:inst|s1[2]    ; clk          ; clk         ; 1.000        ; -0.005     ; 4.013      ;
+; -2.980 ; stoppuhr_bcd:inst|temp[5]  ; stoppuhr_bcd:inst|bcd_a[0] ; clk          ; clk         ; 1.000        ; -0.003     ; 4.015      ;
+; -2.980 ; stoppuhr_bcd:inst|temp[5]  ; stoppuhr_bcd:inst|bcd_c[0] ; clk          ; clk         ; 1.000        ; -0.003     ; 4.015      ;
+; -2.980 ; stoppuhr_bcd:inst|temp[5]  ; stoppuhr_bcd:inst|bcd_c[1] ; clk          ; clk         ; 1.000        ; -0.003     ; 4.015      ;
+; -2.980 ; stoppuhr_bcd:inst|temp[5]  ; stoppuhr_bcd:inst|bcd_c[2] ; clk          ; clk         ; 1.000        ; -0.003     ; 4.015      ;
+; -2.980 ; stoppuhr_bcd:inst|temp[5]  ; stoppuhr_bcd:inst|bcd_c[3] ; clk          ; clk         ; 1.000        ; -0.003     ; 4.015      ;
+; -2.980 ; stoppuhr_bcd:inst|temp[5]  ; stoppuhr_bcd:inst|bcd_d[0] ; clk          ; clk         ; 1.000        ; -0.003     ; 4.015      ;
+; -2.980 ; stoppuhr_bcd:inst|temp[5]  ; stoppuhr_bcd:inst|bcd_d[1] ; clk          ; clk         ; 1.000        ; -0.003     ; 4.015      ;
+; -2.980 ; stoppuhr_bcd:inst|temp[5]  ; stoppuhr_bcd:inst|bcd_d[2] ; clk          ; clk         ; 1.000        ; -0.003     ; 4.015      ;
+; -2.980 ; stoppuhr_bcd:inst|temp[5]  ; stoppuhr_bcd:inst|bcd_d[3] ; clk          ; clk         ; 1.000        ; -0.003     ; 4.015      ;
+; -2.979 ; stoppuhr_bcd:inst|s1[3]    ; stoppuhr_bcd:inst|s2[1]    ; clk          ; clk         ; 1.000        ; -0.003     ; 4.014      ;
+; -2.979 ; stoppuhr_bcd:inst|s1[3]    ; stoppuhr_bcd:inst|s2[0]    ; clk          ; clk         ; 1.000        ; -0.003     ; 4.014      ;
+; -2.979 ; stoppuhr_bcd:inst|s1[3]    ; stoppuhr_bcd:inst|s2[2]    ; clk          ; clk         ; 1.000        ; -0.003     ; 4.014      ;
+; -2.974 ; stoppuhr_bcd:inst|temp[5]  ; stoppuhr_bcd:inst|bcd_a[2] ; clk          ; clk         ; 1.000        ; -0.005     ; 4.007      ;
+; -2.974 ; stoppuhr_bcd:inst|temp[5]  ; stoppuhr_bcd:inst|bcd_b[0] ; clk          ; clk         ; 1.000        ; -0.005     ; 4.007      ;
+; -2.974 ; stoppuhr_bcd:inst|temp[5]  ; stoppuhr_bcd:inst|bcd_b[1] ; clk          ; clk         ; 1.000        ; -0.005     ; 4.007      ;
+; -2.974 ; stoppuhr_bcd:inst|temp[5]  ; stoppuhr_bcd:inst|bcd_b[2] ; clk          ; clk         ; 1.000        ; -0.005     ; 4.007      ;
+; -2.974 ; stoppuhr_bcd:inst|temp[5]  ; stoppuhr_bcd:inst|bcd_b[3] ; clk          ; clk         ; 1.000        ; -0.005     ; 4.007      ;
+; -2.968 ; stoppuhr_bcd:inst|temp[5]  ; stoppuhr_bcd:inst|ms1[2]   ; clk          ; clk         ; 1.000        ; -0.003     ; 4.003      ;
+; -2.968 ; stoppuhr_bcd:inst|temp[5]  ; stoppuhr_bcd:inst|ms1[0]   ; clk          ; clk         ; 1.000        ; -0.003     ; 4.003      ;
+; -2.968 ; stoppuhr_bcd:inst|temp[5]  ; stoppuhr_bcd:inst|ms1[1]   ; clk          ; clk         ; 1.000        ; -0.003     ; 4.003      ;
+; -2.968 ; stoppuhr_bcd:inst|temp[5]  ; stoppuhr_bcd:inst|ms1[3]   ; clk          ; clk         ; 1.000        ; -0.003     ; 4.003      ;
+; -2.965 ; stoppuhr_bcd:inst|temp[16] ; stoppuhr_bcd:inst|s2[1]    ; clk          ; clk         ; 1.000        ; -0.004     ; 3.999      ;
+; -2.965 ; stoppuhr_bcd:inst|temp[16] ; stoppuhr_bcd:inst|s2[0]    ; clk          ; clk         ; 1.000        ; -0.004     ; 3.999      ;
+; -2.965 ; stoppuhr_bcd:inst|temp[16] ; stoppuhr_bcd:inst|s2[2]    ; clk          ; clk         ; 1.000        ; -0.004     ; 3.999      ;
+; -2.941 ; stoppuhr_bcd:inst|temp[7]  ; stoppuhr_bcd:inst|s1[1]    ; clk          ; clk         ; 1.000        ; -0.005     ; 3.974      ;
+; -2.941 ; stoppuhr_bcd:inst|temp[7]  ; stoppuhr_bcd:inst|s1[0]    ; clk          ; clk         ; 1.000        ; -0.005     ; 3.974      ;
+; -2.941 ; stoppuhr_bcd:inst|temp[7]  ; stoppuhr_bcd:inst|s1[3]    ; clk          ; clk         ; 1.000        ; -0.005     ; 3.974      ;
+; -2.941 ; stoppuhr_bcd:inst|temp[7]  ; stoppuhr_bcd:inst|s1[2]    ; clk          ; clk         ; 1.000        ; -0.005     ; 3.974      ;
+; -2.941 ; stoppuhr_bcd:inst|temp[7]  ; stoppuhr_bcd:inst|bcd_a[0] ; clk          ; clk         ; 1.000        ; -0.003     ; 3.976      ;
+; -2.941 ; stoppuhr_bcd:inst|temp[7]  ; stoppuhr_bcd:inst|bcd_c[0] ; clk          ; clk         ; 1.000        ; -0.003     ; 3.976      ;
+; -2.941 ; stoppuhr_bcd:inst|temp[7]  ; stoppuhr_bcd:inst|bcd_c[1] ; clk          ; clk         ; 1.000        ; -0.003     ; 3.976      ;
+; -2.941 ; stoppuhr_bcd:inst|temp[7]  ; stoppuhr_bcd:inst|bcd_c[2] ; clk          ; clk         ; 1.000        ; -0.003     ; 3.976      ;
+; -2.941 ; stoppuhr_bcd:inst|temp[7]  ; stoppuhr_bcd:inst|bcd_c[3] ; clk          ; clk         ; 1.000        ; -0.003     ; 3.976      ;
+; -2.941 ; stoppuhr_bcd:inst|temp[7]  ; stoppuhr_bcd:inst|bcd_d[0] ; clk          ; clk         ; 1.000        ; -0.003     ; 3.976      ;
+; -2.941 ; stoppuhr_bcd:inst|temp[7]  ; stoppuhr_bcd:inst|bcd_d[1] ; clk          ; clk         ; 1.000        ; -0.003     ; 3.976      ;
+; -2.941 ; stoppuhr_bcd:inst|temp[7]  ; stoppuhr_bcd:inst|bcd_d[2] ; clk          ; clk         ; 1.000        ; -0.003     ; 3.976      ;
+; -2.941 ; stoppuhr_bcd:inst|temp[7]  ; stoppuhr_bcd:inst|bcd_d[3] ; clk          ; clk         ; 1.000        ; -0.003     ; 3.976      ;
+; -2.940 ; stoppuhr_bcd:inst|temp[9]  ; stoppuhr_bcd:inst|s2[1]    ; clk          ; clk         ; 1.000        ; -0.004     ; 3.974      ;
+; -2.940 ; stoppuhr_bcd:inst|temp[9]  ; stoppuhr_bcd:inst|s2[0]    ; clk          ; clk         ; 1.000        ; -0.004     ; 3.974      ;
+; -2.940 ; stoppuhr_bcd:inst|temp[9]  ; stoppuhr_bcd:inst|s2[2]    ; clk          ; clk         ; 1.000        ; -0.004     ; 3.974      ;
+; -2.935 ; stoppuhr_bcd:inst|temp[7]  ; stoppuhr_bcd:inst|bcd_a[2] ; clk          ; clk         ; 1.000        ; -0.005     ; 3.968      ;
+; -2.935 ; stoppuhr_bcd:inst|temp[7]  ; stoppuhr_bcd:inst|bcd_b[0] ; clk          ; clk         ; 1.000        ; -0.005     ; 3.968      ;
++--------+----------------------------+----------------------------+--------------+-------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Hold: 'clk'                                                                                                                ;
++-------+----------------------------+----------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                  ; To Node                    ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+----------------------------+----------------------------+--------------+-------------+--------------+------------+------------+
+; 0.445 ; stoppuhr_bcd:inst|ms1[2]   ; stoppuhr_bcd:inst|ms1[2]   ; clk          ; clk         ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; stoppuhr_bcd:inst|ms1[0]   ; stoppuhr_bcd:inst|ms1[0]   ; clk          ; clk         ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; stoppuhr_bcd:inst|ms1[1]   ; stoppuhr_bcd:inst|ms1[1]   ; clk          ; clk         ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; stoppuhr_bcd:inst|ms1[3]   ; stoppuhr_bcd:inst|ms1[3]   ; clk          ; clk         ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; stoppuhr_bcd:inst|ms2[2]   ; stoppuhr_bcd:inst|ms2[2]   ; clk          ; clk         ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; stoppuhr_bcd:inst|ms2[0]   ; stoppuhr_bcd:inst|ms2[0]   ; clk          ; clk         ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; stoppuhr_bcd:inst|ms2[1]   ; stoppuhr_bcd:inst|ms2[1]   ; clk          ; clk         ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; stoppuhr_bcd:inst|ms2[3]   ; stoppuhr_bcd:inst|ms2[3]   ; clk          ; clk         ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; stoppuhr_bcd:inst|s1[1]    ; stoppuhr_bcd:inst|s1[1]    ; clk          ; clk         ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; stoppuhr_bcd:inst|s1[0]    ; stoppuhr_bcd:inst|s1[0]    ; clk          ; clk         ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; stoppuhr_bcd:inst|s1[3]    ; stoppuhr_bcd:inst|s1[3]    ; clk          ; clk         ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; stoppuhr_bcd:inst|s1[2]    ; stoppuhr_bcd:inst|s1[2]    ; clk          ; clk         ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; stoppuhr_bcd:inst|s2[1]    ; stoppuhr_bcd:inst|s2[1]    ; clk          ; clk         ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; stoppuhr_bcd:inst|s2[0]    ; stoppuhr_bcd:inst|s2[0]    ; clk          ; clk         ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; stoppuhr_bcd:inst|s2[2]    ; stoppuhr_bcd:inst|s2[2]    ; clk          ; clk         ; 0.000        ; 0.000      ; 0.731      ;
+; 0.627 ; stoppuhr_bcd:inst|s2[0]    ; stoppuhr_bcd:inst|s2[1]    ; clk          ; clk         ; 0.000        ; 0.000      ; 0.913      ;
+; 0.627 ; stoppuhr_bcd:inst|s2[1]    ; stoppuhr_bcd:inst|s2[0]    ; clk          ; clk         ; 0.000        ; 0.000      ; 0.913      ;
+; 0.628 ; stoppuhr_bcd:inst|ms2[3]   ; stoppuhr_bcd:inst|ms2[1]   ; clk          ; clk         ; 0.000        ; 0.000      ; 0.914      ;
+; 0.629 ; stoppuhr_bcd:inst|s2[0]    ; stoppuhr_bcd:inst|s2[2]    ; clk          ; clk         ; 0.000        ; 0.000      ; 0.915      ;
+; 0.640 ; stoppuhr_bcd:inst|temp[18] ; stoppuhr_bcd:inst|temp[18] ; clk          ; clk         ; 0.000        ; 0.000      ; 0.926      ;
+; 0.646 ; stoppuhr_bcd:inst|ms2[1]   ; stoppuhr_bcd:inst|ms2[3]   ; clk          ; clk         ; 0.000        ; 0.000      ; 0.932      ;
+; 0.647 ; stoppuhr_bcd:inst|ms2[1]   ; stoppuhr_bcd:inst|ms2[2]   ; clk          ; clk         ; 0.000        ; 0.000      ; 0.933      ;
+; 0.647 ; stoppuhr_bcd:inst|ms2[1]   ; stoppuhr_bcd:inst|ms2[0]   ; clk          ; clk         ; 0.000        ; 0.000      ; 0.933      ;
+; 0.650 ; stoppuhr_bcd:inst|ms1[1]   ; stoppuhr_bcd:inst|ms1[3]   ; clk          ; clk         ; 0.000        ; 0.000      ; 0.936      ;
+; 0.651 ; stoppuhr_bcd:inst|ms1[1]   ; stoppuhr_bcd:inst|ms1[2]   ; clk          ; clk         ; 0.000        ; 0.000      ; 0.937      ;
+; 0.653 ; stoppuhr_bcd:inst|ms1[0]   ; stoppuhr_bcd:inst|bcd_d[0] ; clk          ; clk         ; 0.000        ; 0.000      ; 0.939      ;
+; 0.653 ; stoppuhr_bcd:inst|ms1[3]   ; stoppuhr_bcd:inst|bcd_d[3] ; clk          ; clk         ; 0.000        ; 0.000      ; 0.939      ;
+; 0.656 ; stoppuhr_bcd:inst|ms1[0]   ; stoppuhr_bcd:inst|ms1[1]   ; clk          ; clk         ; 0.000        ; 0.000      ; 0.942      ;
+; 0.659 ; stoppuhr_bcd:inst|ms1[3]   ; stoppuhr_bcd:inst|ms1[0]   ; clk          ; clk         ; 0.000        ; 0.000      ; 0.945      ;
+; 0.664 ; stoppuhr_bcd:inst|s1[3]    ; stoppuhr_bcd:inst|s1[1]    ; clk          ; clk         ; 0.000        ; 0.000      ; 0.950      ;
+; 0.667 ; stoppuhr_bcd:inst|s1[1]    ; stoppuhr_bcd:inst|s1[0]    ; clk          ; clk         ; 0.000        ; 0.000      ; 0.953      ;
+; 0.667 ; stoppuhr_bcd:inst|s1[3]    ; stoppuhr_bcd:inst|s1[2]    ; clk          ; clk         ; 0.000        ; 0.000      ; 0.953      ;
+; 0.672 ; stoppuhr_bcd:inst|s1[2]    ; stoppuhr_bcd:inst|s1[3]    ; clk          ; clk         ; 0.000        ; 0.000      ; 0.958      ;
+; 0.777 ; stoppuhr_bcd:inst|ms1[2]   ; stoppuhr_bcd:inst|bcd_d[2] ; clk          ; clk         ; 0.000        ; 0.000      ; 1.063      ;
+; 0.821 ; stoppuhr_bcd:inst|s1[0]    ; stoppuhr_bcd:inst|bcd_b[0] ; clk          ; clk         ; 0.000        ; 0.000      ; 1.107      ;
+; 0.938 ; stoppuhr_bcd:inst|s2[1]    ; stoppuhr_bcd:inst|s2[2]    ; clk          ; clk         ; 0.000        ; 0.000      ; 1.224      ;
+; 0.941 ; stoppuhr_bcd:inst|ms1[2]   ; stoppuhr_bcd:inst|ms1[3]   ; clk          ; clk         ; 0.000        ; 0.000      ; 1.227      ;
+; 0.942 ; stoppuhr_bcd:inst|ms1[3]   ; stoppuhr_bcd:inst|ms1[1]   ; clk          ; clk         ; 0.000        ; 0.000      ; 1.228      ;
+; 0.942 ; stoppuhr_bcd:inst|s2[2]    ; stoppuhr_bcd:inst|s2[1]    ; clk          ; clk         ; 0.000        ; 0.000      ; 1.228      ;
+; 0.945 ; stoppuhr_bcd:inst|ms1[3]   ; stoppuhr_bcd:inst|ms1[2]   ; clk          ; clk         ; 0.000        ; 0.000      ; 1.231      ;
+; 0.949 ; stoppuhr_bcd:inst|ms2[0]   ; stoppuhr_bcd:inst|ms2[3]   ; clk          ; clk         ; 0.000        ; 0.000      ; 1.235      ;
+; 0.954 ; stoppuhr_bcd:inst|ms1[1]   ; stoppuhr_bcd:inst|bcd_d[1] ; clk          ; clk         ; 0.000        ; 0.000      ; 1.240      ;
+; 0.960 ; stoppuhr_bcd:inst|temp[0]  ; stoppuhr_bcd:inst|temp[0]  ; clk          ; clk         ; 0.000        ; 0.000      ; 1.246      ;
+; 0.964 ; stoppuhr_bcd:inst|temp[2]  ; stoppuhr_bcd:inst|temp[2]  ; clk          ; clk         ; 0.000        ; 0.000      ; 1.250      ;
+; 0.964 ; stoppuhr_bcd:inst|temp[4]  ; stoppuhr_bcd:inst|temp[4]  ; clk          ; clk         ; 0.000        ; 0.000      ; 1.250      ;
+; 0.966 ; stoppuhr_bcd:inst|temp[9]  ; stoppuhr_bcd:inst|temp[9]  ; clk          ; clk         ; 0.000        ; 0.000      ; 1.252      ;
+; 0.974 ; stoppuhr_bcd:inst|s1[3]    ; stoppuhr_bcd:inst|bcd_b[3] ; clk          ; clk         ; 0.000        ; 0.000      ; 1.260      ;
+; 0.974 ; stoppuhr_bcd:inst|ms2[3]   ; stoppuhr_bcd:inst|ms2[0]   ; clk          ; clk         ; 0.000        ; 0.000      ; 1.260      ;
+; 0.975 ; stoppuhr_bcd:inst|ms1[2]   ; stoppuhr_bcd:inst|ms1[0]   ; clk          ; clk         ; 0.000        ; 0.000      ; 1.261      ;
+; 0.976 ; stoppuhr_bcd:inst|temp[7]  ; stoppuhr_bcd:inst|temp[7]  ; clk          ; clk         ; 0.000        ; 0.000      ; 1.262      ;
+; 0.978 ; stoppuhr_bcd:inst|ms2[0]   ; stoppuhr_bcd:inst|ms2[2]   ; clk          ; clk         ; 0.000        ; 0.000      ; 1.264      ;
+; 0.980 ; stoppuhr_bcd:inst|s2[2]    ; stoppuhr_bcd:inst|s2[0]    ; clk          ; clk         ; 0.000        ; 0.000      ; 1.266      ;
+; 0.981 ; stoppuhr_bcd:inst|temp[8]  ; stoppuhr_bcd:inst|temp[8]  ; clk          ; clk         ; 0.000        ; 0.000      ; 1.267      ;
+; 0.984 ; stoppuhr_bcd:inst|temp[11] ; stoppuhr_bcd:inst|temp[11] ; clk          ; clk         ; 0.000        ; 0.000      ; 1.270      ;
+; 0.985 ; stoppuhr_bcd:inst|temp[13] ; stoppuhr_bcd:inst|temp[13] ; clk          ; clk         ; 0.000        ; 0.000      ; 1.271      ;
+; 0.985 ; stoppuhr_bcd:inst|temp[16] ; stoppuhr_bcd:inst|temp[16] ; clk          ; clk         ; 0.000        ; 0.000      ; 1.271      ;
+; 0.985 ; stoppuhr_bcd:inst|s1[0]    ; stoppuhr_bcd:inst|s1[3]    ; clk          ; clk         ; 0.000        ; 0.000      ; 1.271      ;
+; 0.986 ; stoppuhr_bcd:inst|ms2[0]   ; stoppuhr_bcd:inst|ms2[1]   ; clk          ; clk         ; 0.000        ; 0.000      ; 1.272      ;
+; 0.998 ; stoppuhr_bcd:inst|s1[2]    ; stoppuhr_bcd:inst|bcd_b[2] ; clk          ; clk         ; 0.000        ; 0.000      ; 1.284      ;
+; 1.005 ; stoppuhr_bcd:inst|ms2[2]   ; stoppuhr_bcd:inst|bcd_c[2] ; clk          ; clk         ; 0.000        ; -0.002     ; 1.289      ;
+; 1.008 ; stoppuhr_bcd:inst|ms1[0]   ; stoppuhr_bcd:inst|ms1[3]   ; clk          ; clk         ; 0.000        ; 0.000      ; 1.294      ;
+; 1.011 ; stoppuhr_bcd:inst|temp[1]  ; stoppuhr_bcd:inst|temp[1]  ; clk          ; clk         ; 0.000        ; 0.000      ; 1.297      ;
+; 1.012 ; stoppuhr_bcd:inst|temp[3]  ; stoppuhr_bcd:inst|temp[3]  ; clk          ; clk         ; 0.000        ; 0.000      ; 1.298      ;
+; 1.013 ; stoppuhr_bcd:inst|s1[2]    ; stoppuhr_bcd:inst|s1[0]    ; clk          ; clk         ; 0.000        ; 0.000      ; 1.299      ;
+; 1.015 ; stoppuhr_bcd:inst|temp[5]  ; stoppuhr_bcd:inst|temp[5]  ; clk          ; clk         ; 0.000        ; 0.000      ; 1.301      ;
+; 1.022 ; stoppuhr_bcd:inst|s1[0]    ; stoppuhr_bcd:inst|s1[2]    ; clk          ; clk         ; 0.000        ; 0.000      ; 1.308      ;
+; 1.024 ; stoppuhr_bcd:inst|s1[0]    ; stoppuhr_bcd:inst|s1[1]    ; clk          ; clk         ; 0.000        ; 0.000      ; 1.310      ;
+; 1.025 ; stoppuhr_bcd:inst|s1[1]    ; stoppuhr_bcd:inst|bcd_b[1] ; clk          ; clk         ; 0.000        ; 0.000      ; 1.311      ;
+; 1.026 ; stoppuhr_bcd:inst|temp[12] ; stoppuhr_bcd:inst|temp[12] ; clk          ; clk         ; 0.000        ; 0.000      ; 1.312      ;
+; 1.027 ; stoppuhr_bcd:inst|temp[15] ; stoppuhr_bcd:inst|temp[15] ; clk          ; clk         ; 0.000        ; 0.000      ; 1.313      ;
+; 1.028 ; stoppuhr_bcd:inst|temp[17] ; stoppuhr_bcd:inst|temp[17] ; clk          ; clk         ; 0.000        ; 0.000      ; 1.314      ;
+; 1.030 ; stoppuhr_bcd:inst|temp[14] ; stoppuhr_bcd:inst|temp[14] ; clk          ; clk         ; 0.000        ; 0.000      ; 1.316      ;
+; 1.044 ; stoppuhr_bcd:inst|ms1[0]   ; stoppuhr_bcd:inst|ms1[2]   ; clk          ; clk         ; 0.000        ; 0.000      ; 1.330      ;
+; 1.165 ; stoppuhr_bcd:inst|ms2[3]   ; stoppuhr_bcd:inst|ms2[2]   ; clk          ; clk         ; 0.000        ; 0.000      ; 1.451      ;
+; 1.183 ; stoppuhr_bcd:inst|s2[1]    ; stoppuhr_bcd:inst|bcd_a[1] ; clk          ; clk         ; 0.000        ; 0.004      ; 1.473      ;
+; 1.193 ; stoppuhr_bcd:inst|temp[10] ; stoppuhr_bcd:inst|temp[10] ; clk          ; clk         ; 0.000        ; 0.000      ; 1.479      ;
+; 1.196 ; stoppuhr_bcd:inst|ms1[1]   ; stoppuhr_bcd:inst|ms1[0]   ; clk          ; clk         ; 0.000        ; 0.000      ; 1.482      ;
+; 1.211 ; stoppuhr_bcd:inst|ms2[2]   ; stoppuhr_bcd:inst|ms2[3]   ; clk          ; clk         ; 0.000        ; 0.000      ; 1.497      ;
+; 1.213 ; stoppuhr_bcd:inst|s1[3]    ; stoppuhr_bcd:inst|s1[0]    ; clk          ; clk         ; 0.000        ; 0.000      ; 1.499      ;
+; 1.229 ; stoppuhr_bcd:inst|s1[1]    ; stoppuhr_bcd:inst|s1[3]    ; clk          ; clk         ; 0.000        ; 0.000      ; 1.515      ;
+; 1.237 ; stoppuhr_bcd:inst|temp[6]  ; stoppuhr_bcd:inst|temp[6]  ; clk          ; clk         ; 0.000        ; 0.000      ; 1.523      ;
+; 1.244 ; stoppuhr_bcd:inst|ms2[2]   ; stoppuhr_bcd:inst|ms2[0]   ; clk          ; clk         ; 0.000        ; 0.000      ; 1.530      ;
+; 1.255 ; stoppuhr_bcd:inst|ms2[0]   ; stoppuhr_bcd:inst|bcd_c[0] ; clk          ; clk         ; 0.000        ; -0.002     ; 1.539      ;
+; 1.273 ; stoppuhr_bcd:inst|ms2[3]   ; stoppuhr_bcd:inst|bcd_c[3] ; clk          ; clk         ; 0.000        ; -0.002     ; 1.557      ;
+; 1.274 ; stoppuhr_bcd:inst|s1[1]    ; stoppuhr_bcd:inst|s1[2]    ; clk          ; clk         ; 0.000        ; 0.000      ; 1.560      ;
+; 1.292 ; stoppuhr_bcd:inst|ms2[1]   ; stoppuhr_bcd:inst|bcd_c[1] ; clk          ; clk         ; 0.000        ; -0.002     ; 1.576      ;
+; 1.322 ; stoppuhr_bcd:inst|s2[2]    ; stoppuhr_bcd:inst|bcd_a[2] ; clk          ; clk         ; 0.000        ; 0.003      ; 1.611      ;
+; 1.396 ; stoppuhr_bcd:inst|temp[2]  ; stoppuhr_bcd:inst|temp[3]  ; clk          ; clk         ; 0.000        ; 0.000      ; 1.682      ;
+; 1.396 ; stoppuhr_bcd:inst|temp[4]  ; stoppuhr_bcd:inst|temp[5]  ; clk          ; clk         ; 0.000        ; 0.000      ; 1.682      ;
+; 1.398 ; stoppuhr_bcd:inst|temp[9]  ; stoppuhr_bcd:inst|temp[10] ; clk          ; clk         ; 0.000        ; 0.000      ; 1.684      ;
+; 1.408 ; stoppuhr_bcd:inst|temp[7]  ; stoppuhr_bcd:inst|temp[8]  ; clk          ; clk         ; 0.000        ; 0.000      ; 1.694      ;
+; 1.416 ; stoppuhr_bcd:inst|temp[11] ; stoppuhr_bcd:inst|temp[12] ; clk          ; clk         ; 0.000        ; 0.000      ; 1.702      ;
+; 1.417 ; stoppuhr_bcd:inst|temp[13] ; stoppuhr_bcd:inst|temp[14] ; clk          ; clk         ; 0.000        ; 0.000      ; 1.703      ;
+; 1.444 ; stoppuhr_bcd:inst|temp[1]  ; stoppuhr_bcd:inst|temp[2]  ; clk          ; clk         ; 0.000        ; 0.000      ; 1.730      ;
+; 1.445 ; stoppuhr_bcd:inst|temp[3]  ; stoppuhr_bcd:inst|temp[4]  ; clk          ; clk         ; 0.000        ; 0.000      ; 1.731      ;
+; 1.448 ; stoppuhr_bcd:inst|temp[5]  ; stoppuhr_bcd:inst|temp[6]  ; clk          ; clk         ; 0.000        ; 0.000      ; 1.734      ;
+; 1.459 ; stoppuhr_bcd:inst|temp[12] ; stoppuhr_bcd:inst|temp[13] ; clk          ; clk         ; 0.000        ; 0.000      ; 1.745      ;
+; 1.460 ; stoppuhr_bcd:inst|temp[15] ; stoppuhr_bcd:inst|temp[16] ; clk          ; clk         ; 0.000        ; 0.000      ; 1.746      ;
+; 1.461 ; stoppuhr_bcd:inst|temp[17] ; stoppuhr_bcd:inst|temp[18] ; clk          ; clk         ; 0.000        ; 0.000      ; 1.747      ;
+; 1.463 ; stoppuhr_bcd:inst|temp[14] ; stoppuhr_bcd:inst|temp[15] ; clk          ; clk         ; 0.000        ; 0.000      ; 1.749      ;
++-------+----------------------------+----------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------+
+; Slow Model Minimum Pulse Width: 'clk'                                                                       ;
++--------+--------------+----------------+------------------+-------+------------+----------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target                     ;
++--------+--------------+----------------+------------------+-------+------------+----------------------------+
+; -1.631 ; 1.000        ; 2.631          ; Port Rate        ; clk   ; Rise       ; clk                        ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; stoppuhr_bcd:inst|bcd_a[0] ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; stoppuhr_bcd:inst|bcd_a[0] ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; stoppuhr_bcd:inst|bcd_a[1] ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; stoppuhr_bcd:inst|bcd_a[1] ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; stoppuhr_bcd:inst|bcd_a[2] ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; stoppuhr_bcd:inst|bcd_a[2] ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; stoppuhr_bcd:inst|bcd_b[0] ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; stoppuhr_bcd:inst|bcd_b[0] ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; stoppuhr_bcd:inst|bcd_b[1] ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; stoppuhr_bcd:inst|bcd_b[1] ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; stoppuhr_bcd:inst|bcd_b[2] ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; stoppuhr_bcd:inst|bcd_b[2] ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; stoppuhr_bcd:inst|bcd_b[3] ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; stoppuhr_bcd:inst|bcd_b[3] ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; stoppuhr_bcd:inst|bcd_c[0] ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; stoppuhr_bcd:inst|bcd_c[0] ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; stoppuhr_bcd:inst|bcd_c[1] ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; stoppuhr_bcd:inst|bcd_c[1] ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; stoppuhr_bcd:inst|bcd_c[2] ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; stoppuhr_bcd:inst|bcd_c[2] ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; stoppuhr_bcd:inst|bcd_c[3] ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; stoppuhr_bcd:inst|bcd_c[3] ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; stoppuhr_bcd:inst|bcd_d[0] ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; stoppuhr_bcd:inst|bcd_d[0] ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; stoppuhr_bcd:inst|bcd_d[1] ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; stoppuhr_bcd:inst|bcd_d[1] ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; stoppuhr_bcd:inst|bcd_d[2] ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; stoppuhr_bcd:inst|bcd_d[2] ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; stoppuhr_bcd:inst|bcd_d[3] ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; stoppuhr_bcd:inst|bcd_d[3] ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; stoppuhr_bcd:inst|ms1[0]   ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; stoppuhr_bcd:inst|ms1[0]   ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; stoppuhr_bcd:inst|ms1[1]   ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; stoppuhr_bcd:inst|ms1[1]   ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; stoppuhr_bcd:inst|ms1[2]   ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; stoppuhr_bcd:inst|ms1[2]   ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; stoppuhr_bcd:inst|ms1[3]   ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; stoppuhr_bcd:inst|ms1[3]   ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; stoppuhr_bcd:inst|ms2[0]   ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; stoppuhr_bcd:inst|ms2[0]   ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; stoppuhr_bcd:inst|ms2[1]   ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; stoppuhr_bcd:inst|ms2[1]   ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; stoppuhr_bcd:inst|ms2[2]   ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; stoppuhr_bcd:inst|ms2[2]   ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; stoppuhr_bcd:inst|ms2[3]   ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; stoppuhr_bcd:inst|ms2[3]   ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; stoppuhr_bcd:inst|s1[0]    ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; stoppuhr_bcd:inst|s1[0]    ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; stoppuhr_bcd:inst|s1[1]    ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; stoppuhr_bcd:inst|s1[1]    ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; stoppuhr_bcd:inst|s1[2]    ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; stoppuhr_bcd:inst|s1[2]    ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; stoppuhr_bcd:inst|s1[3]    ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; stoppuhr_bcd:inst|s1[3]    ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; stoppuhr_bcd:inst|s2[0]    ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; stoppuhr_bcd:inst|s2[0]    ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; stoppuhr_bcd:inst|s2[1]    ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; stoppuhr_bcd:inst|s2[1]    ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; stoppuhr_bcd:inst|s2[2]    ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; stoppuhr_bcd:inst|s2[2]    ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; stoppuhr_bcd:inst|temp[0]  ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; stoppuhr_bcd:inst|temp[0]  ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; stoppuhr_bcd:inst|temp[10] ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; stoppuhr_bcd:inst|temp[10] ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; stoppuhr_bcd:inst|temp[11] ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; stoppuhr_bcd:inst|temp[11] ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; stoppuhr_bcd:inst|temp[12] ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; stoppuhr_bcd:inst|temp[12] ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; stoppuhr_bcd:inst|temp[13] ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; stoppuhr_bcd:inst|temp[13] ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; stoppuhr_bcd:inst|temp[14] ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; stoppuhr_bcd:inst|temp[14] ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; stoppuhr_bcd:inst|temp[15] ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; stoppuhr_bcd:inst|temp[15] ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; stoppuhr_bcd:inst|temp[16] ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; stoppuhr_bcd:inst|temp[16] ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; stoppuhr_bcd:inst|temp[17] ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; stoppuhr_bcd:inst|temp[17] ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; stoppuhr_bcd:inst|temp[18] ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; stoppuhr_bcd:inst|temp[18] ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; stoppuhr_bcd:inst|temp[1]  ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; stoppuhr_bcd:inst|temp[1]  ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; stoppuhr_bcd:inst|temp[2]  ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; stoppuhr_bcd:inst|temp[2]  ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; stoppuhr_bcd:inst|temp[3]  ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; stoppuhr_bcd:inst|temp[3]  ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; stoppuhr_bcd:inst|temp[4]  ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; stoppuhr_bcd:inst|temp[4]  ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; stoppuhr_bcd:inst|temp[5]  ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; stoppuhr_bcd:inst|temp[5]  ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; stoppuhr_bcd:inst|temp[6]  ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; stoppuhr_bcd:inst|temp[6]  ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; stoppuhr_bcd:inst|temp[7]  ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; stoppuhr_bcd:inst|temp[7]  ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; stoppuhr_bcd:inst|temp[8]  ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; stoppuhr_bcd:inst|temp[8]  ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; clk   ; Rise       ; stoppuhr_bcd:inst|temp[9]  ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; clk   ; Rise       ; stoppuhr_bcd:inst|temp[9]  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; clk|combout                ;
++--------+--------------+----------------+------------------+-------+------------+----------------------------+
+
+
++------------------------------------------------------------------------+
+; Setup Times                                                            ;
++------------+------------+-------+-------+------------+-----------------+
+; Data Port  ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++------------+------------+-------+-------+------------+-----------------+
+; cnt_enable ; clk        ; 3.735 ; 3.735 ; Rise       ; clk             ;
+; reset_n    ; clk        ; 6.962 ; 6.962 ; Rise       ; clk             ;
++------------+------------+-------+-------+------------+-----------------+
+
+
++--------------------------------------------------------------------------+
+; Hold Times                                                               ;
++------------+------------+--------+--------+------------+-----------------+
+; Data Port  ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++------------+------------+--------+--------+------------+-----------------+
+; cnt_enable ; clk        ; -2.066 ; -2.066 ; Rise       ; clk             ;
+; reset_n    ; clk        ; -5.225 ; -5.225 ; Rise       ; clk             ;
++------------+------------+--------+--------+------------+-----------------+
+
+
++---------------------------------------------------------------------------+
+; Clock to Output Times                                                     ;
++---------------+------------+-------+-------+------------+-----------------+
+; Data Port     ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++---------------+------------+-------+-------+------------+-----------------+
+; led_hex_a[*]  ; clk        ; 9.102 ; 9.102 ; Rise       ; clk             ;
+;  led_hex_a[0] ; clk        ; 8.194 ; 8.194 ; Rise       ; clk             ;
+;  led_hex_a[1] ; clk        ; 8.189 ; 8.189 ; Rise       ; clk             ;
+;  led_hex_a[2] ; clk        ; 8.187 ; 8.187 ; Rise       ; clk             ;
+;  led_hex_a[3] ; clk        ; 8.719 ; 8.719 ; Rise       ; clk             ;
+;  led_hex_a[4] ; clk        ; 9.102 ; 9.102 ; Rise       ; clk             ;
+;  led_hex_a[5] ; clk        ; 8.541 ; 8.541 ; Rise       ; clk             ;
+;  led_hex_a[6] ; clk        ; 8.231 ; 8.231 ; Rise       ; clk             ;
+; led_hex_b[*]  ; clk        ; 7.812 ; 7.812 ; Rise       ; clk             ;
+;  led_hex_b[0] ; clk        ; 7.736 ; 7.736 ; Rise       ; clk             ;
+;  led_hex_b[1] ; clk        ; 7.435 ; 7.435 ; Rise       ; clk             ;
+;  led_hex_b[2] ; clk        ; 7.473 ; 7.473 ; Rise       ; clk             ;
+;  led_hex_b[3] ; clk        ; 7.471 ; 7.471 ; Rise       ; clk             ;
+;  led_hex_b[4] ; clk        ; 7.774 ; 7.774 ; Rise       ; clk             ;
+;  led_hex_b[5] ; clk        ; 7.780 ; 7.780 ; Rise       ; clk             ;
+;  led_hex_b[6] ; clk        ; 7.812 ; 7.812 ; Rise       ; clk             ;
+; led_hex_c[*]  ; clk        ; 8.312 ; 8.312 ; Rise       ; clk             ;
+;  led_hex_c[0] ; clk        ; 8.072 ; 8.072 ; Rise       ; clk             ;
+;  led_hex_c[1] ; clk        ; 8.296 ; 8.296 ; Rise       ; clk             ;
+;  led_hex_c[2] ; clk        ; 8.282 ; 8.282 ; Rise       ; clk             ;
+;  led_hex_c[3] ; clk        ; 8.281 ; 8.281 ; Rise       ; clk             ;
+;  led_hex_c[4] ; clk        ; 8.312 ; 8.312 ; Rise       ; clk             ;
+;  led_hex_c[5] ; clk        ; 8.029 ; 8.029 ; Rise       ; clk             ;
+;  led_hex_c[6] ; clk        ; 8.061 ; 8.061 ; Rise       ; clk             ;
+; led_hex_d[*]  ; clk        ; 8.921 ; 8.921 ; Rise       ; clk             ;
+;  led_hex_d[0] ; clk        ; 8.885 ; 8.885 ; Rise       ; clk             ;
+;  led_hex_d[1] ; clk        ; 8.921 ; 8.921 ; Rise       ; clk             ;
+;  led_hex_d[2] ; clk        ; 8.789 ; 8.789 ; Rise       ; clk             ;
+;  led_hex_d[3] ; clk        ; 8.895 ; 8.895 ; Rise       ; clk             ;
+;  led_hex_d[4] ; clk        ; 8.580 ; 8.580 ; Rise       ; clk             ;
+;  led_hex_d[5] ; clk        ; 8.575 ; 8.575 ; Rise       ; clk             ;
+;  led_hex_d[6] ; clk        ; 8.574 ; 8.574 ; Rise       ; clk             ;
++---------------+------------+-------+-------+------------+-----------------+
+
+
++---------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                             ;
++---------------+------------+-------+-------+------------+-----------------+
+; Data Port     ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++---------------+------------+-------+-------+------------+-----------------+
+; led_hex_a[*]  ; clk        ; 7.383 ; 7.383 ; Rise       ; clk             ;
+;  led_hex_a[0] ; clk        ; 7.383 ; 7.383 ; Rise       ; clk             ;
+;  led_hex_a[1] ; clk        ; 7.717 ; 7.717 ; Rise       ; clk             ;
+;  led_hex_a[2] ; clk        ; 7.720 ; 7.720 ; Rise       ; clk             ;
+;  led_hex_a[3] ; clk        ; 8.248 ; 8.248 ; Rise       ; clk             ;
+;  led_hex_a[4] ; clk        ; 7.430 ; 7.430 ; Rise       ; clk             ;
+;  led_hex_a[5] ; clk        ; 7.707 ; 7.707 ; Rise       ; clk             ;
+;  led_hex_a[6] ; clk        ; 7.770 ; 7.770 ; Rise       ; clk             ;
+; led_hex_b[*]  ; clk        ; 6.869 ; 6.869 ; Rise       ; clk             ;
+;  led_hex_b[0] ; clk        ; 7.396 ; 7.396 ; Rise       ; clk             ;
+;  led_hex_b[1] ; clk        ; 7.055 ; 7.055 ; Rise       ; clk             ;
+;  led_hex_b[2] ; clk        ; 7.096 ; 7.096 ; Rise       ; clk             ;
+;  led_hex_b[3] ; clk        ; 6.869 ; 6.869 ; Rise       ; clk             ;
+;  led_hex_b[4] ; clk        ; 7.190 ; 7.190 ; Rise       ; clk             ;
+;  led_hex_b[5] ; clk        ; 7.403 ; 7.403 ; Rise       ; clk             ;
+;  led_hex_b[6] ; clk        ; 7.432 ; 7.432 ; Rise       ; clk             ;
+; led_hex_c[*]  ; clk        ; 7.466 ; 7.466 ; Rise       ; clk             ;
+;  led_hex_c[0] ; clk        ; 7.485 ; 7.485 ; Rise       ; clk             ;
+;  led_hex_c[1] ; clk        ; 7.916 ; 7.916 ; Rise       ; clk             ;
+;  led_hex_c[2] ; clk        ; 7.896 ; 7.896 ; Rise       ; clk             ;
+;  led_hex_c[3] ; clk        ; 7.894 ; 7.894 ; Rise       ; clk             ;
+;  led_hex_c[4] ; clk        ; 7.923 ; 7.923 ; Rise       ; clk             ;
+;  led_hex_c[5] ; clk        ; 7.466 ; 7.466 ; Rise       ; clk             ;
+;  led_hex_c[6] ; clk        ; 7.467 ; 7.467 ; Rise       ; clk             ;
+; led_hex_d[*]  ; clk        ; 7.941 ; 7.941 ; Rise       ; clk             ;
+;  led_hex_d[0] ; clk        ; 8.251 ; 8.251 ; Rise       ; clk             ;
+;  led_hex_d[1] ; clk        ; 8.281 ; 8.281 ; Rise       ; clk             ;
+;  led_hex_d[2] ; clk        ; 8.155 ; 8.155 ; Rise       ; clk             ;
+;  led_hex_d[3] ; clk        ; 8.265 ; 8.265 ; Rise       ; clk             ;
+;  led_hex_d[4] ; clk        ; 7.941 ; 7.941 ; Rise       ; clk             ;
+;  led_hex_d[5] ; clk        ; 7.945 ; 7.945 ; Rise       ; clk             ;
+;  led_hex_d[6] ; clk        ; 7.944 ; 7.944 ; Rise       ; clk             ;
++---------------+------------+-------+-------+------------+-----------------+
+
+
++--------------------------------+
+; Fast Model Setup Summary       ;
++-------+--------+---------------+
+; Clock ; Slack  ; End Point TNS ;
++-------+--------+---------------+
+; clk   ; -0.678 ; -26.704       ;
++-------+--------+---------------+
+
+
++-------------------------------+
+; Fast Model Hold Summary       ;
++-------+-------+---------------+
+; Clock ; Slack ; End Point TNS ;
++-------+-------+---------------+
+; clk   ; 0.215 ; 0.000         ;
++-------+-------+---------------+
+
+
+-------------------------------
+; Fast Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Fast Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
++----------------------------------------+
+; Fast Model Minimum Pulse Width Summary ;
++-------+--------+-----------------------+
+; Clock ; Slack  ; End Point TNS         ;
++-------+--------+-----------------------+
+; clk   ; -1.380 ; -50.380               ;
++-------+--------+-----------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Setup: 'clk'                                                                                                                ;
++--------+----------------------------+----------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                  ; To Node                    ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+----------------------------+----------------------------+--------------+-------------+--------------+------------+------------+
+; -0.678 ; stoppuhr_bcd:inst|temp[5]  ; stoppuhr_bcd:inst|s2[1]    ; clk          ; clk         ; 1.000        ; -0.007     ; 1.703      ;
+; -0.678 ; stoppuhr_bcd:inst|temp[5]  ; stoppuhr_bcd:inst|s2[0]    ; clk          ; clk         ; 1.000        ; -0.007     ; 1.703      ;
+; -0.678 ; stoppuhr_bcd:inst|temp[5]  ; stoppuhr_bcd:inst|s2[2]    ; clk          ; clk         ; 1.000        ; -0.007     ; 1.703      ;
+; -0.667 ; stoppuhr_bcd:inst|temp[7]  ; stoppuhr_bcd:inst|s2[1]    ; clk          ; clk         ; 1.000        ; -0.007     ; 1.692      ;
+; -0.667 ; stoppuhr_bcd:inst|temp[8]  ; stoppuhr_bcd:inst|s2[1]    ; clk          ; clk         ; 1.000        ; -0.007     ; 1.692      ;
+; -0.667 ; stoppuhr_bcd:inst|temp[7]  ; stoppuhr_bcd:inst|s2[0]    ; clk          ; clk         ; 1.000        ; -0.007     ; 1.692      ;
+; -0.667 ; stoppuhr_bcd:inst|temp[8]  ; stoppuhr_bcd:inst|s2[0]    ; clk          ; clk         ; 1.000        ; -0.007     ; 1.692      ;
+; -0.667 ; stoppuhr_bcd:inst|temp[7]  ; stoppuhr_bcd:inst|s2[2]    ; clk          ; clk         ; 1.000        ; -0.007     ; 1.692      ;
+; -0.667 ; stoppuhr_bcd:inst|temp[8]  ; stoppuhr_bcd:inst|s2[2]    ; clk          ; clk         ; 1.000        ; -0.007     ; 1.692      ;
+; -0.623 ; stoppuhr_bcd:inst|temp[5]  ; stoppuhr_bcd:inst|ms2[2]   ; clk          ; clk         ; 1.000        ; 0.000      ; 1.655      ;
+; -0.623 ; stoppuhr_bcd:inst|temp[5]  ; stoppuhr_bcd:inst|ms2[0]   ; clk          ; clk         ; 1.000        ; 0.000      ; 1.655      ;
+; -0.623 ; stoppuhr_bcd:inst|temp[5]  ; stoppuhr_bcd:inst|ms2[1]   ; clk          ; clk         ; 1.000        ; 0.000      ; 1.655      ;
+; -0.623 ; stoppuhr_bcd:inst|temp[5]  ; stoppuhr_bcd:inst|ms2[3]   ; clk          ; clk         ; 1.000        ; 0.000      ; 1.655      ;
+; -0.612 ; stoppuhr_bcd:inst|temp[7]  ; stoppuhr_bcd:inst|ms2[2]   ; clk          ; clk         ; 1.000        ; 0.000      ; 1.644      ;
+; -0.612 ; stoppuhr_bcd:inst|temp[8]  ; stoppuhr_bcd:inst|ms2[2]   ; clk          ; clk         ; 1.000        ; 0.000      ; 1.644      ;
+; -0.612 ; stoppuhr_bcd:inst|temp[7]  ; stoppuhr_bcd:inst|ms2[0]   ; clk          ; clk         ; 1.000        ; 0.000      ; 1.644      ;
+; -0.612 ; stoppuhr_bcd:inst|temp[8]  ; stoppuhr_bcd:inst|ms2[0]   ; clk          ; clk         ; 1.000        ; 0.000      ; 1.644      ;
+; -0.612 ; stoppuhr_bcd:inst|temp[7]  ; stoppuhr_bcd:inst|ms2[1]   ; clk          ; clk         ; 1.000        ; 0.000      ; 1.644      ;
+; -0.612 ; stoppuhr_bcd:inst|temp[8]  ; stoppuhr_bcd:inst|ms2[1]   ; clk          ; clk         ; 1.000        ; 0.000      ; 1.644      ;
+; -0.612 ; stoppuhr_bcd:inst|temp[7]  ; stoppuhr_bcd:inst|ms2[3]   ; clk          ; clk         ; 1.000        ; 0.000      ; 1.644      ;
+; -0.612 ; stoppuhr_bcd:inst|temp[8]  ; stoppuhr_bcd:inst|ms2[3]   ; clk          ; clk         ; 1.000        ; 0.000      ; 1.644      ;
+; -0.604 ; stoppuhr_bcd:inst|s1[3]    ; stoppuhr_bcd:inst|s2[1]    ; clk          ; clk         ; 1.000        ; -0.003     ; 1.633      ;
+; -0.604 ; stoppuhr_bcd:inst|temp[12] ; stoppuhr_bcd:inst|s2[1]    ; clk          ; clk         ; 1.000        ; -0.004     ; 1.632      ;
+; -0.604 ; stoppuhr_bcd:inst|s1[3]    ; stoppuhr_bcd:inst|s2[0]    ; clk          ; clk         ; 1.000        ; -0.003     ; 1.633      ;
+; -0.604 ; stoppuhr_bcd:inst|temp[12] ; stoppuhr_bcd:inst|s2[0]    ; clk          ; clk         ; 1.000        ; -0.004     ; 1.632      ;
+; -0.604 ; stoppuhr_bcd:inst|s1[3]    ; stoppuhr_bcd:inst|s2[2]    ; clk          ; clk         ; 1.000        ; -0.003     ; 1.633      ;
+; -0.604 ; stoppuhr_bcd:inst|temp[12] ; stoppuhr_bcd:inst|s2[2]    ; clk          ; clk         ; 1.000        ; -0.004     ; 1.632      ;
+; -0.602 ; stoppuhr_bcd:inst|temp[15] ; stoppuhr_bcd:inst|s2[1]    ; clk          ; clk         ; 1.000        ; -0.004     ; 1.630      ;
+; -0.602 ; stoppuhr_bcd:inst|temp[15] ; stoppuhr_bcd:inst|s2[0]    ; clk          ; clk         ; 1.000        ; -0.004     ; 1.630      ;
+; -0.602 ; stoppuhr_bcd:inst|temp[15] ; stoppuhr_bcd:inst|s2[2]    ; clk          ; clk         ; 1.000        ; -0.004     ; 1.630      ;
+; -0.591 ; stoppuhr_bcd:inst|temp[5]  ; stoppuhr_bcd:inst|temp[0]  ; clk          ; clk         ; 1.000        ; 0.000      ; 1.623      ;
+; -0.591 ; stoppuhr_bcd:inst|temp[5]  ; stoppuhr_bcd:inst|temp[1]  ; clk          ; clk         ; 1.000        ; 0.000      ; 1.623      ;
+; -0.591 ; stoppuhr_bcd:inst|temp[5]  ; stoppuhr_bcd:inst|temp[2]  ; clk          ; clk         ; 1.000        ; 0.000      ; 1.623      ;
+; -0.591 ; stoppuhr_bcd:inst|temp[5]  ; stoppuhr_bcd:inst|temp[3]  ; clk          ; clk         ; 1.000        ; 0.000      ; 1.623      ;
+; -0.591 ; stoppuhr_bcd:inst|temp[5]  ; stoppuhr_bcd:inst|temp[4]  ; clk          ; clk         ; 1.000        ; 0.000      ; 1.623      ;
+; -0.591 ; stoppuhr_bcd:inst|temp[5]  ; stoppuhr_bcd:inst|temp[5]  ; clk          ; clk         ; 1.000        ; 0.000      ; 1.623      ;
+; -0.591 ; stoppuhr_bcd:inst|temp[5]  ; stoppuhr_bcd:inst|temp[6]  ; clk          ; clk         ; 1.000        ; 0.000      ; 1.623      ;
+; -0.591 ; stoppuhr_bcd:inst|temp[5]  ; stoppuhr_bcd:inst|temp[7]  ; clk          ; clk         ; 1.000        ; 0.000      ; 1.623      ;
+; -0.591 ; stoppuhr_bcd:inst|temp[5]  ; stoppuhr_bcd:inst|temp[8]  ; clk          ; clk         ; 1.000        ; 0.000      ; 1.623      ;
+; -0.589 ; stoppuhr_bcd:inst|ms1[0]   ; stoppuhr_bcd:inst|s2[1]    ; clk          ; clk         ; 1.000        ; -0.005     ; 1.616      ;
+; -0.589 ; stoppuhr_bcd:inst|ms1[0]   ; stoppuhr_bcd:inst|s2[0]    ; clk          ; clk         ; 1.000        ; -0.005     ; 1.616      ;
+; -0.589 ; stoppuhr_bcd:inst|ms1[0]   ; stoppuhr_bcd:inst|s2[2]    ; clk          ; clk         ; 1.000        ; -0.005     ; 1.616      ;
+; -0.589 ; stoppuhr_bcd:inst|temp[16] ; stoppuhr_bcd:inst|s2[1]    ; clk          ; clk         ; 1.000        ; -0.004     ; 1.617      ;
+; -0.589 ; stoppuhr_bcd:inst|temp[16] ; stoppuhr_bcd:inst|s2[0]    ; clk          ; clk         ; 1.000        ; -0.004     ; 1.617      ;
+; -0.589 ; stoppuhr_bcd:inst|temp[16] ; stoppuhr_bcd:inst|s2[2]    ; clk          ; clk         ; 1.000        ; -0.004     ; 1.617      ;
+; -0.580 ; stoppuhr_bcd:inst|temp[7]  ; stoppuhr_bcd:inst|temp[0]  ; clk          ; clk         ; 1.000        ; 0.000      ; 1.612      ;
+; -0.580 ; stoppuhr_bcd:inst|temp[8]  ; stoppuhr_bcd:inst|temp[0]  ; clk          ; clk         ; 1.000        ; 0.000      ; 1.612      ;
+; -0.580 ; stoppuhr_bcd:inst|temp[7]  ; stoppuhr_bcd:inst|temp[1]  ; clk          ; clk         ; 1.000        ; 0.000      ; 1.612      ;
+; -0.580 ; stoppuhr_bcd:inst|temp[8]  ; stoppuhr_bcd:inst|temp[1]  ; clk          ; clk         ; 1.000        ; 0.000      ; 1.612      ;
+; -0.580 ; stoppuhr_bcd:inst|temp[7]  ; stoppuhr_bcd:inst|temp[2]  ; clk          ; clk         ; 1.000        ; 0.000      ; 1.612      ;
+; -0.580 ; stoppuhr_bcd:inst|temp[8]  ; stoppuhr_bcd:inst|temp[2]  ; clk          ; clk         ; 1.000        ; 0.000      ; 1.612      ;
+; -0.580 ; stoppuhr_bcd:inst|temp[7]  ; stoppuhr_bcd:inst|temp[3]  ; clk          ; clk         ; 1.000        ; 0.000      ; 1.612      ;
+; -0.580 ; stoppuhr_bcd:inst|temp[8]  ; stoppuhr_bcd:inst|temp[3]  ; clk          ; clk         ; 1.000        ; 0.000      ; 1.612      ;
+; -0.580 ; stoppuhr_bcd:inst|temp[7]  ; stoppuhr_bcd:inst|temp[4]  ; clk          ; clk         ; 1.000        ; 0.000      ; 1.612      ;
+; -0.580 ; stoppuhr_bcd:inst|temp[8]  ; stoppuhr_bcd:inst|temp[4]  ; clk          ; clk         ; 1.000        ; 0.000      ; 1.612      ;
+; -0.580 ; stoppuhr_bcd:inst|temp[7]  ; stoppuhr_bcd:inst|temp[5]  ; clk          ; clk         ; 1.000        ; 0.000      ; 1.612      ;
+; -0.580 ; stoppuhr_bcd:inst|temp[8]  ; stoppuhr_bcd:inst|temp[5]  ; clk          ; clk         ; 1.000        ; 0.000      ; 1.612      ;
+; -0.580 ; stoppuhr_bcd:inst|temp[7]  ; stoppuhr_bcd:inst|temp[6]  ; clk          ; clk         ; 1.000        ; 0.000      ; 1.612      ;
+; -0.580 ; stoppuhr_bcd:inst|temp[8]  ; stoppuhr_bcd:inst|temp[6]  ; clk          ; clk         ; 1.000        ; 0.000      ; 1.612      ;
+; -0.580 ; stoppuhr_bcd:inst|temp[7]  ; stoppuhr_bcd:inst|temp[7]  ; clk          ; clk         ; 1.000        ; 0.000      ; 1.612      ;
+; -0.580 ; stoppuhr_bcd:inst|temp[8]  ; stoppuhr_bcd:inst|temp[7]  ; clk          ; clk         ; 1.000        ; 0.000      ; 1.612      ;
+; -0.580 ; stoppuhr_bcd:inst|temp[7]  ; stoppuhr_bcd:inst|temp[8]  ; clk          ; clk         ; 1.000        ; 0.000      ; 1.612      ;
+; -0.580 ; stoppuhr_bcd:inst|temp[8]  ; stoppuhr_bcd:inst|temp[8]  ; clk          ; clk         ; 1.000        ; 0.000      ; 1.612      ;
+; -0.578 ; stoppuhr_bcd:inst|temp[9]  ; stoppuhr_bcd:inst|s2[1]    ; clk          ; clk         ; 1.000        ; -0.004     ; 1.606      ;
+; -0.578 ; stoppuhr_bcd:inst|temp[9]  ; stoppuhr_bcd:inst|s2[0]    ; clk          ; clk         ; 1.000        ; -0.004     ; 1.606      ;
+; -0.578 ; stoppuhr_bcd:inst|temp[9]  ; stoppuhr_bcd:inst|s2[2]    ; clk          ; clk         ; 1.000        ; -0.004     ; 1.606      ;
+; -0.572 ; stoppuhr_bcd:inst|ms1[1]   ; stoppuhr_bcd:inst|s2[1]    ; clk          ; clk         ; 1.000        ; -0.005     ; 1.599      ;
+; -0.572 ; stoppuhr_bcd:inst|ms1[1]   ; stoppuhr_bcd:inst|s2[0]    ; clk          ; clk         ; 1.000        ; -0.005     ; 1.599      ;
+; -0.572 ; stoppuhr_bcd:inst|ms1[1]   ; stoppuhr_bcd:inst|s2[2]    ; clk          ; clk         ; 1.000        ; -0.005     ; 1.599      ;
+; -0.570 ; stoppuhr_bcd:inst|temp[5]  ; stoppuhr_bcd:inst|s1[1]    ; clk          ; clk         ; 1.000        ; -0.004     ; 1.598      ;
+; -0.570 ; stoppuhr_bcd:inst|temp[5]  ; stoppuhr_bcd:inst|s1[0]    ; clk          ; clk         ; 1.000        ; -0.004     ; 1.598      ;
+; -0.570 ; stoppuhr_bcd:inst|temp[5]  ; stoppuhr_bcd:inst|s1[3]    ; clk          ; clk         ; 1.000        ; -0.004     ; 1.598      ;
+; -0.570 ; stoppuhr_bcd:inst|temp[5]  ; stoppuhr_bcd:inst|s1[2]    ; clk          ; clk         ; 1.000        ; -0.004     ; 1.598      ;
+; -0.566 ; stoppuhr_bcd:inst|temp[5]  ; stoppuhr_bcd:inst|bcd_a[0] ; clk          ; clk         ; 1.000        ; -0.002     ; 1.596      ;
+; -0.566 ; stoppuhr_bcd:inst|temp[5]  ; stoppuhr_bcd:inst|bcd_c[0] ; clk          ; clk         ; 1.000        ; -0.002     ; 1.596      ;
+; -0.566 ; stoppuhr_bcd:inst|temp[5]  ; stoppuhr_bcd:inst|bcd_c[1] ; clk          ; clk         ; 1.000        ; -0.002     ; 1.596      ;
+; -0.566 ; stoppuhr_bcd:inst|temp[5]  ; stoppuhr_bcd:inst|bcd_c[2] ; clk          ; clk         ; 1.000        ; -0.002     ; 1.596      ;
+; -0.566 ; stoppuhr_bcd:inst|temp[5]  ; stoppuhr_bcd:inst|bcd_c[3] ; clk          ; clk         ; 1.000        ; -0.002     ; 1.596      ;
+; -0.566 ; stoppuhr_bcd:inst|temp[5]  ; stoppuhr_bcd:inst|bcd_d[0] ; clk          ; clk         ; 1.000        ; -0.002     ; 1.596      ;
+; -0.566 ; stoppuhr_bcd:inst|temp[5]  ; stoppuhr_bcd:inst|bcd_d[1] ; clk          ; clk         ; 1.000        ; -0.002     ; 1.596      ;
+; -0.566 ; stoppuhr_bcd:inst|temp[5]  ; stoppuhr_bcd:inst|bcd_d[2] ; clk          ; clk         ; 1.000        ; -0.002     ; 1.596      ;
+; -0.566 ; stoppuhr_bcd:inst|temp[5]  ; stoppuhr_bcd:inst|bcd_d[3] ; clk          ; clk         ; 1.000        ; -0.002     ; 1.596      ;
+; -0.564 ; stoppuhr_bcd:inst|temp[5]  ; stoppuhr_bcd:inst|bcd_a[2] ; clk          ; clk         ; 1.000        ; -0.004     ; 1.592      ;
+; -0.564 ; stoppuhr_bcd:inst|temp[5]  ; stoppuhr_bcd:inst|bcd_b[0] ; clk          ; clk         ; 1.000        ; -0.004     ; 1.592      ;
+; -0.564 ; stoppuhr_bcd:inst|temp[5]  ; stoppuhr_bcd:inst|bcd_b[1] ; clk          ; clk         ; 1.000        ; -0.004     ; 1.592      ;
+; -0.564 ; stoppuhr_bcd:inst|temp[5]  ; stoppuhr_bcd:inst|bcd_b[2] ; clk          ; clk         ; 1.000        ; -0.004     ; 1.592      ;
+; -0.564 ; stoppuhr_bcd:inst|temp[5]  ; stoppuhr_bcd:inst|bcd_b[3] ; clk          ; clk         ; 1.000        ; -0.004     ; 1.592      ;
+; -0.563 ; stoppuhr_bcd:inst|temp[5]  ; stoppuhr_bcd:inst|ms1[2]   ; clk          ; clk         ; 1.000        ; -0.002     ; 1.593      ;
+; -0.563 ; stoppuhr_bcd:inst|temp[5]  ; stoppuhr_bcd:inst|ms1[0]   ; clk          ; clk         ; 1.000        ; -0.002     ; 1.593      ;
+; -0.563 ; stoppuhr_bcd:inst|temp[5]  ; stoppuhr_bcd:inst|ms1[1]   ; clk          ; clk         ; 1.000        ; -0.002     ; 1.593      ;
+; -0.563 ; stoppuhr_bcd:inst|temp[5]  ; stoppuhr_bcd:inst|ms1[3]   ; clk          ; clk         ; 1.000        ; -0.002     ; 1.593      ;
+; -0.559 ; stoppuhr_bcd:inst|temp[7]  ; stoppuhr_bcd:inst|s1[1]    ; clk          ; clk         ; 1.000        ; -0.004     ; 1.587      ;
+; -0.559 ; stoppuhr_bcd:inst|temp[8]  ; stoppuhr_bcd:inst|s1[1]    ; clk          ; clk         ; 1.000        ; -0.004     ; 1.587      ;
+; -0.559 ; stoppuhr_bcd:inst|temp[7]  ; stoppuhr_bcd:inst|s1[0]    ; clk          ; clk         ; 1.000        ; -0.004     ; 1.587      ;
+; -0.559 ; stoppuhr_bcd:inst|temp[8]  ; stoppuhr_bcd:inst|s1[0]    ; clk          ; clk         ; 1.000        ; -0.004     ; 1.587      ;
+; -0.559 ; stoppuhr_bcd:inst|temp[7]  ; stoppuhr_bcd:inst|s1[3]    ; clk          ; clk         ; 1.000        ; -0.004     ; 1.587      ;
+; -0.559 ; stoppuhr_bcd:inst|temp[8]  ; stoppuhr_bcd:inst|s1[3]    ; clk          ; clk         ; 1.000        ; -0.004     ; 1.587      ;
+; -0.559 ; stoppuhr_bcd:inst|temp[7]  ; stoppuhr_bcd:inst|s1[2]    ; clk          ; clk         ; 1.000        ; -0.004     ; 1.587      ;
+; -0.559 ; stoppuhr_bcd:inst|temp[8]  ; stoppuhr_bcd:inst|s1[2]    ; clk          ; clk         ; 1.000        ; -0.004     ; 1.587      ;
+; -0.555 ; stoppuhr_bcd:inst|temp[7]  ; stoppuhr_bcd:inst|bcd_a[0] ; clk          ; clk         ; 1.000        ; -0.002     ; 1.585      ;
++--------+----------------------------+----------------------------+--------------+-------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Hold: 'clk'                                                                                                                ;
++-------+----------------------------+----------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                  ; To Node                    ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+----------------------------+----------------------------+--------------+-------------+--------------+------------+------------+
+; 0.215 ; stoppuhr_bcd:inst|ms1[2]   ; stoppuhr_bcd:inst|ms1[2]   ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; stoppuhr_bcd:inst|ms1[0]   ; stoppuhr_bcd:inst|ms1[0]   ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; stoppuhr_bcd:inst|ms1[1]   ; stoppuhr_bcd:inst|ms1[1]   ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; stoppuhr_bcd:inst|ms1[3]   ; stoppuhr_bcd:inst|ms1[3]   ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; stoppuhr_bcd:inst|ms2[2]   ; stoppuhr_bcd:inst|ms2[2]   ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; stoppuhr_bcd:inst|ms2[0]   ; stoppuhr_bcd:inst|ms2[0]   ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; stoppuhr_bcd:inst|ms2[1]   ; stoppuhr_bcd:inst|ms2[1]   ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; stoppuhr_bcd:inst|ms2[3]   ; stoppuhr_bcd:inst|ms2[3]   ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; stoppuhr_bcd:inst|s1[1]    ; stoppuhr_bcd:inst|s1[1]    ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; stoppuhr_bcd:inst|s1[0]    ; stoppuhr_bcd:inst|s1[0]    ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; stoppuhr_bcd:inst|s1[3]    ; stoppuhr_bcd:inst|s1[3]    ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; stoppuhr_bcd:inst|s1[2]    ; stoppuhr_bcd:inst|s1[2]    ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; stoppuhr_bcd:inst|s2[1]    ; stoppuhr_bcd:inst|s2[1]    ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; stoppuhr_bcd:inst|s2[0]    ; stoppuhr_bcd:inst|s2[0]    ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; stoppuhr_bcd:inst|s2[2]    ; stoppuhr_bcd:inst|s2[2]    ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.241 ; stoppuhr_bcd:inst|s2[1]    ; stoppuhr_bcd:inst|s2[0]    ; clk          ; clk         ; 0.000        ; 0.000      ; 0.393      ;
+; 0.242 ; stoppuhr_bcd:inst|s2[0]    ; stoppuhr_bcd:inst|s2[1]    ; clk          ; clk         ; 0.000        ; 0.000      ; 0.394      ;
+; 0.243 ; stoppuhr_bcd:inst|ms2[3]   ; stoppuhr_bcd:inst|ms2[1]   ; clk          ; clk         ; 0.000        ; 0.000      ; 0.395      ;
+; 0.243 ; stoppuhr_bcd:inst|s2[0]    ; stoppuhr_bcd:inst|s2[2]    ; clk          ; clk         ; 0.000        ; 0.000      ; 0.395      ;
+; 0.248 ; stoppuhr_bcd:inst|temp[18] ; stoppuhr_bcd:inst|temp[18] ; clk          ; clk         ; 0.000        ; 0.000      ; 0.400      ;
+; 0.250 ; stoppuhr_bcd:inst|ms2[1]   ; stoppuhr_bcd:inst|ms2[3]   ; clk          ; clk         ; 0.000        ; 0.000      ; 0.402      ;
+; 0.251 ; stoppuhr_bcd:inst|ms2[1]   ; stoppuhr_bcd:inst|ms2[0]   ; clk          ; clk         ; 0.000        ; 0.000      ; 0.403      ;
+; 0.252 ; stoppuhr_bcd:inst|ms2[1]   ; stoppuhr_bcd:inst|ms2[2]   ; clk          ; clk         ; 0.000        ; 0.000      ; 0.404      ;
+; 0.255 ; stoppuhr_bcd:inst|ms1[1]   ; stoppuhr_bcd:inst|ms1[3]   ; clk          ; clk         ; 0.000        ; 0.000      ; 0.407      ;
+; 0.256 ; stoppuhr_bcd:inst|ms1[1]   ; stoppuhr_bcd:inst|ms1[2]   ; clk          ; clk         ; 0.000        ; 0.000      ; 0.408      ;
+; 0.257 ; stoppuhr_bcd:inst|ms1[0]   ; stoppuhr_bcd:inst|bcd_d[0] ; clk          ; clk         ; 0.000        ; 0.000      ; 0.409      ;
+; 0.257 ; stoppuhr_bcd:inst|ms1[3]   ; stoppuhr_bcd:inst|bcd_d[3] ; clk          ; clk         ; 0.000        ; 0.000      ; 0.409      ;
+; 0.260 ; stoppuhr_bcd:inst|ms1[0]   ; stoppuhr_bcd:inst|ms1[1]   ; clk          ; clk         ; 0.000        ; 0.000      ; 0.412      ;
+; 0.261 ; stoppuhr_bcd:inst|s1[3]    ; stoppuhr_bcd:inst|s1[1]    ; clk          ; clk         ; 0.000        ; 0.000      ; 0.413      ;
+; 0.262 ; stoppuhr_bcd:inst|ms1[3]   ; stoppuhr_bcd:inst|ms1[0]   ; clk          ; clk         ; 0.000        ; 0.000      ; 0.414      ;
+; 0.263 ; stoppuhr_bcd:inst|s1[1]    ; stoppuhr_bcd:inst|s1[0]    ; clk          ; clk         ; 0.000        ; 0.000      ; 0.415      ;
+; 0.263 ; stoppuhr_bcd:inst|s1[3]    ; stoppuhr_bcd:inst|s1[2]    ; clk          ; clk         ; 0.000        ; 0.000      ; 0.415      ;
+; 0.268 ; stoppuhr_bcd:inst|s1[2]    ; stoppuhr_bcd:inst|s1[3]    ; clk          ; clk         ; 0.000        ; 0.000      ; 0.420      ;
+; 0.333 ; stoppuhr_bcd:inst|ms1[2]   ; stoppuhr_bcd:inst|bcd_d[2] ; clk          ; clk         ; 0.000        ; 0.000      ; 0.485      ;
+; 0.354 ; stoppuhr_bcd:inst|temp[0]  ; stoppuhr_bcd:inst|temp[0]  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.506      ;
+; 0.356 ; stoppuhr_bcd:inst|temp[2]  ; stoppuhr_bcd:inst|temp[2]  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.508      ;
+; 0.356 ; stoppuhr_bcd:inst|temp[4]  ; stoppuhr_bcd:inst|temp[4]  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.508      ;
+; 0.357 ; stoppuhr_bcd:inst|temp[9]  ; stoppuhr_bcd:inst|temp[9]  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.509      ;
+; 0.358 ; stoppuhr_bcd:inst|s1[0]    ; stoppuhr_bcd:inst|bcd_b[0] ; clk          ; clk         ; 0.000        ; 0.000      ; 0.510      ;
+; 0.361 ; stoppuhr_bcd:inst|s2[1]    ; stoppuhr_bcd:inst|s2[2]    ; clk          ; clk         ; 0.000        ; 0.000      ; 0.513      ;
+; 0.363 ; stoppuhr_bcd:inst|temp[7]  ; stoppuhr_bcd:inst|temp[7]  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.515      ;
+; 0.363 ; stoppuhr_bcd:inst|temp[8]  ; stoppuhr_bcd:inst|temp[8]  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.515      ;
+; 0.363 ; stoppuhr_bcd:inst|ms1[2]   ; stoppuhr_bcd:inst|ms1[0]   ; clk          ; clk         ; 0.000        ; 0.000      ; 0.515      ;
+; 0.363 ; stoppuhr_bcd:inst|ms2[0]   ; stoppuhr_bcd:inst|ms2[2]   ; clk          ; clk         ; 0.000        ; 0.000      ; 0.515      ;
+; 0.363 ; stoppuhr_bcd:inst|ms2[3]   ; stoppuhr_bcd:inst|ms2[0]   ; clk          ; clk         ; 0.000        ; 0.000      ; 0.515      ;
+; 0.363 ; stoppuhr_bcd:inst|s2[2]    ; stoppuhr_bcd:inst|s2[1]    ; clk          ; clk         ; 0.000        ; 0.000      ; 0.515      ;
+; 0.363 ; stoppuhr_bcd:inst|s2[2]    ; stoppuhr_bcd:inst|s2[0]    ; clk          ; clk         ; 0.000        ; 0.000      ; 0.515      ;
+; 0.367 ; stoppuhr_bcd:inst|temp[11] ; stoppuhr_bcd:inst|temp[11] ; clk          ; clk         ; 0.000        ; 0.000      ; 0.519      ;
+; 0.368 ; stoppuhr_bcd:inst|temp[13] ; stoppuhr_bcd:inst|temp[13] ; clk          ; clk         ; 0.000        ; 0.000      ; 0.520      ;
+; 0.368 ; stoppuhr_bcd:inst|temp[16] ; stoppuhr_bcd:inst|temp[16] ; clk          ; clk         ; 0.000        ; 0.000      ; 0.520      ;
+; 0.371 ; stoppuhr_bcd:inst|temp[1]  ; stoppuhr_bcd:inst|temp[1]  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.523      ;
+; 0.371 ; stoppuhr_bcd:inst|ms2[0]   ; stoppuhr_bcd:inst|ms2[1]   ; clk          ; clk         ; 0.000        ; 0.000      ; 0.523      ;
+; 0.372 ; stoppuhr_bcd:inst|temp[3]  ; stoppuhr_bcd:inst|temp[3]  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.524      ;
+; 0.372 ; stoppuhr_bcd:inst|ms1[2]   ; stoppuhr_bcd:inst|ms1[3]   ; clk          ; clk         ; 0.000        ; 0.000      ; 0.524      ;
+; 0.372 ; stoppuhr_bcd:inst|ms2[0]   ; stoppuhr_bcd:inst|ms2[3]   ; clk          ; clk         ; 0.000        ; 0.000      ; 0.524      ;
+; 0.374 ; stoppuhr_bcd:inst|temp[5]  ; stoppuhr_bcd:inst|temp[5]  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.526      ;
+; 0.376 ; stoppuhr_bcd:inst|temp[17] ; stoppuhr_bcd:inst|temp[17] ; clk          ; clk         ; 0.000        ; 0.000      ; 0.528      ;
+; 0.377 ; stoppuhr_bcd:inst|ms1[3]   ; stoppuhr_bcd:inst|ms1[1]   ; clk          ; clk         ; 0.000        ; 0.000      ; 0.529      ;
+; 0.380 ; stoppuhr_bcd:inst|temp[12] ; stoppuhr_bcd:inst|temp[12] ; clk          ; clk         ; 0.000        ; 0.000      ; 0.532      ;
+; 0.380 ; stoppuhr_bcd:inst|ms1[3]   ; stoppuhr_bcd:inst|ms1[2]   ; clk          ; clk         ; 0.000        ; 0.000      ; 0.532      ;
+; 0.381 ; stoppuhr_bcd:inst|temp[15] ; stoppuhr_bcd:inst|temp[15] ; clk          ; clk         ; 0.000        ; 0.000      ; 0.533      ;
+; 0.382 ; stoppuhr_bcd:inst|temp[14] ; stoppuhr_bcd:inst|temp[14] ; clk          ; clk         ; 0.000        ; 0.000      ; 0.534      ;
+; 0.384 ; stoppuhr_bcd:inst|s1[2]    ; stoppuhr_bcd:inst|s1[0]    ; clk          ; clk         ; 0.000        ; 0.000      ; 0.536      ;
+; 0.385 ; stoppuhr_bcd:inst|ms1[0]   ; stoppuhr_bcd:inst|ms1[2]   ; clk          ; clk         ; 0.000        ; 0.000      ; 0.537      ;
+; 0.394 ; stoppuhr_bcd:inst|s1[0]    ; stoppuhr_bcd:inst|s1[3]    ; clk          ; clk         ; 0.000        ; 0.000      ; 0.546      ;
+; 0.394 ; stoppuhr_bcd:inst|s1[0]    ; stoppuhr_bcd:inst|s1[2]    ; clk          ; clk         ; 0.000        ; 0.000      ; 0.546      ;
+; 0.396 ; stoppuhr_bcd:inst|s1[0]    ; stoppuhr_bcd:inst|s1[1]    ; clk          ; clk         ; 0.000        ; 0.000      ; 0.548      ;
+; 0.397 ; stoppuhr_bcd:inst|ms1[0]   ; stoppuhr_bcd:inst|ms1[3]   ; clk          ; clk         ; 0.000        ; 0.000      ; 0.549      ;
+; 0.404 ; stoppuhr_bcd:inst|ms1[1]   ; stoppuhr_bcd:inst|bcd_d[1] ; clk          ; clk         ; 0.000        ; 0.000      ; 0.556      ;
+; 0.408 ; stoppuhr_bcd:inst|s1[2]    ; stoppuhr_bcd:inst|bcd_b[2] ; clk          ; clk         ; 0.000        ; 0.000      ; 0.560      ;
+; 0.416 ; stoppuhr_bcd:inst|ms2[2]   ; stoppuhr_bcd:inst|bcd_c[2] ; clk          ; clk         ; 0.000        ; -0.002     ; 0.566      ;
+; 0.417 ; stoppuhr_bcd:inst|s1[3]    ; stoppuhr_bcd:inst|bcd_b[3] ; clk          ; clk         ; 0.000        ; 0.000      ; 0.569      ;
+; 0.424 ; stoppuhr_bcd:inst|s1[1]    ; stoppuhr_bcd:inst|bcd_b[1] ; clk          ; clk         ; 0.000        ; 0.000      ; 0.576      ;
+; 0.437 ; stoppuhr_bcd:inst|temp[10] ; stoppuhr_bcd:inst|temp[10] ; clk          ; clk         ; 0.000        ; 0.000      ; 0.589      ;
+; 0.442 ; stoppuhr_bcd:inst|s2[1]    ; stoppuhr_bcd:inst|bcd_a[1] ; clk          ; clk         ; 0.000        ; 0.004      ; 0.598      ;
+; 0.448 ; stoppuhr_bcd:inst|ms1[1]   ; stoppuhr_bcd:inst|ms1[0]   ; clk          ; clk         ; 0.000        ; 0.000      ; 0.600      ;
+; 0.451 ; stoppuhr_bcd:inst|temp[6]  ; stoppuhr_bcd:inst|temp[6]  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.603      ;
+; 0.455 ; stoppuhr_bcd:inst|ms2[2]   ; stoppuhr_bcd:inst|ms2[0]   ; clk          ; clk         ; 0.000        ; 0.000      ; 0.607      ;
+; 0.458 ; stoppuhr_bcd:inst|ms2[3]   ; stoppuhr_bcd:inst|ms2[2]   ; clk          ; clk         ; 0.000        ; 0.000      ; 0.610      ;
+; 0.459 ; stoppuhr_bcd:inst|s1[3]    ; stoppuhr_bcd:inst|s1[0]    ; clk          ; clk         ; 0.000        ; 0.000      ; 0.611      ;
+; 0.466 ; stoppuhr_bcd:inst|ms2[2]   ; stoppuhr_bcd:inst|ms2[3]   ; clk          ; clk         ; 0.000        ; 0.000      ; 0.618      ;
+; 0.475 ; stoppuhr_bcd:inst|s1[1]    ; stoppuhr_bcd:inst|s1[3]    ; clk          ; clk         ; 0.000        ; 0.000      ; 0.627      ;
+; 0.478 ; stoppuhr_bcd:inst|s1[1]    ; stoppuhr_bcd:inst|s1[2]    ; clk          ; clk         ; 0.000        ; 0.000      ; 0.630      ;
+; 0.494 ; stoppuhr_bcd:inst|temp[2]  ; stoppuhr_bcd:inst|temp[3]  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.646      ;
+; 0.494 ; stoppuhr_bcd:inst|temp[4]  ; stoppuhr_bcd:inst|temp[5]  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.646      ;
+; 0.495 ; stoppuhr_bcd:inst|temp[9]  ; stoppuhr_bcd:inst|temp[10] ; clk          ; clk         ; 0.000        ; 0.000      ; 0.647      ;
+; 0.501 ; stoppuhr_bcd:inst|ms2[0]   ; stoppuhr_bcd:inst|bcd_c[0] ; clk          ; clk         ; 0.000        ; -0.002     ; 0.651      ;
+; 0.501 ; stoppuhr_bcd:inst|temp[7]  ; stoppuhr_bcd:inst|temp[8]  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.653      ;
+; 0.505 ; stoppuhr_bcd:inst|temp[11] ; stoppuhr_bcd:inst|temp[12] ; clk          ; clk         ; 0.000        ; 0.000      ; 0.657      ;
+; 0.506 ; stoppuhr_bcd:inst|temp[13] ; stoppuhr_bcd:inst|temp[14] ; clk          ; clk         ; 0.000        ; 0.000      ; 0.658      ;
+; 0.508 ; stoppuhr_bcd:inst|ms2[3]   ; stoppuhr_bcd:inst|bcd_c[3] ; clk          ; clk         ; 0.000        ; -0.002     ; 0.658      ;
+; 0.511 ; stoppuhr_bcd:inst|temp[1]  ; stoppuhr_bcd:inst|temp[2]  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.663      ;
+; 0.512 ; stoppuhr_bcd:inst|temp[3]  ; stoppuhr_bcd:inst|temp[4]  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.664      ;
+; 0.514 ; stoppuhr_bcd:inst|temp[5]  ; stoppuhr_bcd:inst|temp[6]  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.666      ;
+; 0.516 ; stoppuhr_bcd:inst|temp[17] ; stoppuhr_bcd:inst|temp[18] ; clk          ; clk         ; 0.000        ; 0.000      ; 0.668      ;
+; 0.517 ; stoppuhr_bcd:inst|ms2[1]   ; stoppuhr_bcd:inst|bcd_c[1] ; clk          ; clk         ; 0.000        ; -0.002     ; 0.667      ;
+; 0.520 ; stoppuhr_bcd:inst|temp[12] ; stoppuhr_bcd:inst|temp[13] ; clk          ; clk         ; 0.000        ; 0.000      ; 0.672      ;
+; 0.521 ; stoppuhr_bcd:inst|temp[15] ; stoppuhr_bcd:inst|temp[16] ; clk          ; clk         ; 0.000        ; 0.000      ; 0.673      ;
+; 0.522 ; stoppuhr_bcd:inst|temp[14] ; stoppuhr_bcd:inst|temp[15] ; clk          ; clk         ; 0.000        ; 0.000      ; 0.674      ;
+; 0.525 ; stoppuhr_bcd:inst|s2[2]    ; stoppuhr_bcd:inst|bcd_a[2] ; clk          ; clk         ; 0.000        ; 0.003      ; 0.680      ;
++-------+----------------------------+----------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------+
+; Fast Model Minimum Pulse Width: 'clk'                                                                       ;
++--------+--------------+----------------+------------------+-------+------------+----------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target                     ;
++--------+--------------+----------------+------------------+-------+------------+----------------------------+
+; -1.380 ; 1.000        ; 2.380          ; Port Rate        ; clk   ; Rise       ; clk                        ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; stoppuhr_bcd:inst|bcd_a[0] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; stoppuhr_bcd:inst|bcd_a[0] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; stoppuhr_bcd:inst|bcd_a[1] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; stoppuhr_bcd:inst|bcd_a[1] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; stoppuhr_bcd:inst|bcd_a[2] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; stoppuhr_bcd:inst|bcd_a[2] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; stoppuhr_bcd:inst|bcd_b[0] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; stoppuhr_bcd:inst|bcd_b[0] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; stoppuhr_bcd:inst|bcd_b[1] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; stoppuhr_bcd:inst|bcd_b[1] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; stoppuhr_bcd:inst|bcd_b[2] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; stoppuhr_bcd:inst|bcd_b[2] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; stoppuhr_bcd:inst|bcd_b[3] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; stoppuhr_bcd:inst|bcd_b[3] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; stoppuhr_bcd:inst|bcd_c[0] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; stoppuhr_bcd:inst|bcd_c[0] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; stoppuhr_bcd:inst|bcd_c[1] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; stoppuhr_bcd:inst|bcd_c[1] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; stoppuhr_bcd:inst|bcd_c[2] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; stoppuhr_bcd:inst|bcd_c[2] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; stoppuhr_bcd:inst|bcd_c[3] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; stoppuhr_bcd:inst|bcd_c[3] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; stoppuhr_bcd:inst|bcd_d[0] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; stoppuhr_bcd:inst|bcd_d[0] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; stoppuhr_bcd:inst|bcd_d[1] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; stoppuhr_bcd:inst|bcd_d[1] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; stoppuhr_bcd:inst|bcd_d[2] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; stoppuhr_bcd:inst|bcd_d[2] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; stoppuhr_bcd:inst|bcd_d[3] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; stoppuhr_bcd:inst|bcd_d[3] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; stoppuhr_bcd:inst|ms1[0]   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; stoppuhr_bcd:inst|ms1[0]   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; stoppuhr_bcd:inst|ms1[1]   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; stoppuhr_bcd:inst|ms1[1]   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; stoppuhr_bcd:inst|ms1[2]   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; stoppuhr_bcd:inst|ms1[2]   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; stoppuhr_bcd:inst|ms1[3]   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; stoppuhr_bcd:inst|ms1[3]   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; stoppuhr_bcd:inst|ms2[0]   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; stoppuhr_bcd:inst|ms2[0]   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; stoppuhr_bcd:inst|ms2[1]   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; stoppuhr_bcd:inst|ms2[1]   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; stoppuhr_bcd:inst|ms2[2]   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; stoppuhr_bcd:inst|ms2[2]   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; stoppuhr_bcd:inst|ms2[3]   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; stoppuhr_bcd:inst|ms2[3]   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; stoppuhr_bcd:inst|s1[0]    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; stoppuhr_bcd:inst|s1[0]    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; stoppuhr_bcd:inst|s1[1]    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; stoppuhr_bcd:inst|s1[1]    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; stoppuhr_bcd:inst|s1[2]    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; stoppuhr_bcd:inst|s1[2]    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; stoppuhr_bcd:inst|s1[3]    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; stoppuhr_bcd:inst|s1[3]    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; stoppuhr_bcd:inst|s2[0]    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; stoppuhr_bcd:inst|s2[0]    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; stoppuhr_bcd:inst|s2[1]    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; stoppuhr_bcd:inst|s2[1]    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; stoppuhr_bcd:inst|s2[2]    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; stoppuhr_bcd:inst|s2[2]    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; stoppuhr_bcd:inst|temp[0]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; stoppuhr_bcd:inst|temp[0]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; stoppuhr_bcd:inst|temp[10] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; stoppuhr_bcd:inst|temp[10] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; stoppuhr_bcd:inst|temp[11] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; stoppuhr_bcd:inst|temp[11] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; stoppuhr_bcd:inst|temp[12] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; stoppuhr_bcd:inst|temp[12] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; stoppuhr_bcd:inst|temp[13] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; stoppuhr_bcd:inst|temp[13] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; stoppuhr_bcd:inst|temp[14] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; stoppuhr_bcd:inst|temp[14] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; stoppuhr_bcd:inst|temp[15] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; stoppuhr_bcd:inst|temp[15] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; stoppuhr_bcd:inst|temp[16] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; stoppuhr_bcd:inst|temp[16] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; stoppuhr_bcd:inst|temp[17] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; stoppuhr_bcd:inst|temp[17] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; stoppuhr_bcd:inst|temp[18] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; stoppuhr_bcd:inst|temp[18] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; stoppuhr_bcd:inst|temp[1]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; stoppuhr_bcd:inst|temp[1]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; stoppuhr_bcd:inst|temp[2]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; stoppuhr_bcd:inst|temp[2]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; stoppuhr_bcd:inst|temp[3]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; stoppuhr_bcd:inst|temp[3]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; stoppuhr_bcd:inst|temp[4]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; stoppuhr_bcd:inst|temp[4]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; stoppuhr_bcd:inst|temp[5]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; stoppuhr_bcd:inst|temp[5]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; stoppuhr_bcd:inst|temp[6]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; stoppuhr_bcd:inst|temp[6]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; stoppuhr_bcd:inst|temp[7]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; stoppuhr_bcd:inst|temp[7]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; stoppuhr_bcd:inst|temp[8]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; stoppuhr_bcd:inst|temp[8]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; stoppuhr_bcd:inst|temp[9]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; stoppuhr_bcd:inst|temp[9]  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; clk|combout                ;
++--------+--------------+----------------+------------------+-------+------------+----------------------------+
+
+
++------------------------------------------------------------------------+
+; Setup Times                                                            ;
++------------+------------+-------+-------+------------+-----------------+
+; Data Port  ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++------------+------------+-------+-------+------------+-----------------+
+; cnt_enable ; clk        ; 1.069 ; 1.069 ; Rise       ; clk             ;
+; reset_n    ; clk        ; 3.155 ; 3.155 ; Rise       ; clk             ;
++------------+------------+-------+-------+------------+-----------------+
+
+
++--------------------------------------------------------------------------+
+; Hold Times                                                               ;
++------------+------------+--------+--------+------------+-----------------+
+; Data Port  ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++------------+------------+--------+--------+------------+-----------------+
+; cnt_enable ; clk        ; -0.401 ; -0.401 ; Rise       ; clk             ;
+; reset_n    ; clk        ; -2.497 ; -2.497 ; Rise       ; clk             ;
++------------+------------+--------+--------+------------+-----------------+
+
+
++---------------------------------------------------------------------------+
+; Clock to Output Times                                                     ;
++---------------+------------+-------+-------+------------+-----------------+
+; Data Port     ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++---------------+------------+-------+-------+------------+-----------------+
+; led_hex_a[*]  ; clk        ; 4.527 ; 4.527 ; Rise       ; clk             ;
+;  led_hex_a[0] ; clk        ; 4.190 ; 4.190 ; Rise       ; clk             ;
+;  led_hex_a[1] ; clk        ; 4.255 ; 4.255 ; Rise       ; clk             ;
+;  led_hex_a[2] ; clk        ; 4.280 ; 4.280 ; Rise       ; clk             ;
+;  led_hex_a[3] ; clk        ; 4.408 ; 4.408 ; Rise       ; clk             ;
+;  led_hex_a[4] ; clk        ; 4.527 ; 4.527 ; Rise       ; clk             ;
+;  led_hex_a[5] ; clk        ; 4.323 ; 4.323 ; Rise       ; clk             ;
+;  led_hex_a[6] ; clk        ; 4.194 ; 4.194 ; Rise       ; clk             ;
+; led_hex_b[*]  ; clk        ; 4.056 ; 4.056 ; Rise       ; clk             ;
+;  led_hex_b[0] ; clk        ; 4.022 ; 4.022 ; Rise       ; clk             ;
+;  led_hex_b[1] ; clk        ; 3.895 ; 3.895 ; Rise       ; clk             ;
+;  led_hex_b[2] ; clk        ; 3.939 ; 3.939 ; Rise       ; clk             ;
+;  led_hex_b[3] ; clk        ; 3.943 ; 3.943 ; Rise       ; clk             ;
+;  led_hex_b[4] ; clk        ; 4.049 ; 4.049 ; Rise       ; clk             ;
+;  led_hex_b[5] ; clk        ; 4.031 ; 4.031 ; Rise       ; clk             ;
+;  led_hex_b[6] ; clk        ; 4.056 ; 4.056 ; Rise       ; clk             ;
+; led_hex_c[*]  ; clk        ; 4.238 ; 4.238 ; Rise       ; clk             ;
+;  led_hex_c[0] ; clk        ; 4.164 ; 4.164 ; Rise       ; clk             ;
+;  led_hex_c[1] ; clk        ; 4.227 ; 4.227 ; Rise       ; clk             ;
+;  led_hex_c[2] ; clk        ; 4.212 ; 4.212 ; Rise       ; clk             ;
+;  led_hex_c[3] ; clk        ; 4.224 ; 4.224 ; Rise       ; clk             ;
+;  led_hex_c[4] ; clk        ; 4.238 ; 4.238 ; Rise       ; clk             ;
+;  led_hex_c[5] ; clk        ; 4.148 ; 4.148 ; Rise       ; clk             ;
+;  led_hex_c[6] ; clk        ; 4.148 ; 4.148 ; Rise       ; clk             ;
+; led_hex_d[*]  ; clk        ; 4.491 ; 4.491 ; Rise       ; clk             ;
+;  led_hex_d[0] ; clk        ; 4.458 ; 4.458 ; Rise       ; clk             ;
+;  led_hex_d[1] ; clk        ; 4.491 ; 4.491 ; Rise       ; clk             ;
+;  led_hex_d[2] ; clk        ; 4.430 ; 4.430 ; Rise       ; clk             ;
+;  led_hex_d[3] ; clk        ; 4.475 ; 4.475 ; Rise       ; clk             ;
+;  led_hex_d[4] ; clk        ; 4.364 ; 4.364 ; Rise       ; clk             ;
+;  led_hex_d[5] ; clk        ; 4.363 ; 4.363 ; Rise       ; clk             ;
+;  led_hex_d[6] ; clk        ; 4.359 ; 4.359 ; Rise       ; clk             ;
++---------------+------------+-------+-------+------------+-----------------+
+
+
++---------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                             ;
++---------------+------------+-------+-------+------------+-----------------+
+; Data Port     ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++---------------+------------+-------+-------+------------+-----------------+
+; led_hex_a[*]  ; clk        ; 3.887 ; 3.887 ; Rise       ; clk             ;
+;  led_hex_a[0] ; clk        ; 3.887 ; 3.887 ; Rise       ; clk             ;
+;  led_hex_a[1] ; clk        ; 4.082 ; 4.082 ; Rise       ; clk             ;
+;  led_hex_a[2] ; clk        ; 4.086 ; 4.086 ; Rise       ; clk             ;
+;  led_hex_a[3] ; clk        ; 4.236 ; 4.236 ; Rise       ; clk             ;
+;  led_hex_a[4] ; clk        ; 3.947 ; 3.947 ; Rise       ; clk             ;
+;  led_hex_a[5] ; clk        ; 4.021 ; 4.021 ; Rise       ; clk             ;
+;  led_hex_a[6] ; clk        ; 4.032 ; 4.032 ; Rise       ; clk             ;
+; led_hex_b[*]  ; clk        ; 3.757 ; 3.757 ; Rise       ; clk             ;
+;  led_hex_b[0] ; clk        ; 3.898 ; 3.898 ; Rise       ; clk             ;
+;  led_hex_b[1] ; clk        ; 3.770 ; 3.770 ; Rise       ; clk             ;
+;  led_hex_b[2] ; clk        ; 3.809 ; 3.809 ; Rise       ; clk             ;
+;  led_hex_b[3] ; clk        ; 3.757 ; 3.757 ; Rise       ; clk             ;
+;  led_hex_b[4] ; clk        ; 3.864 ; 3.864 ; Rise       ; clk             ;
+;  led_hex_b[5] ; clk        ; 3.906 ; 3.906 ; Rise       ; clk             ;
+;  led_hex_b[6] ; clk        ; 3.931 ; 3.931 ; Rise       ; clk             ;
+; led_hex_c[*]  ; clk        ; 3.977 ; 3.977 ; Rise       ; clk             ;
+;  led_hex_c[0] ; clk        ; 3.997 ; 3.997 ; Rise       ; clk             ;
+;  led_hex_c[1] ; clk        ; 4.099 ; 4.099 ; Rise       ; clk             ;
+;  led_hex_c[2] ; clk        ; 4.080 ; 4.080 ; Rise       ; clk             ;
+;  led_hex_c[3] ; clk        ; 4.085 ; 4.085 ; Rise       ; clk             ;
+;  led_hex_c[4] ; clk        ; 4.106 ; 4.106 ; Rise       ; clk             ;
+;  led_hex_c[5] ; clk        ; 3.977 ; 3.977 ; Rise       ; clk             ;
+;  led_hex_c[6] ; clk        ; 3.977 ; 3.977 ; Rise       ; clk             ;
+; led_hex_d[*]  ; clk        ; 4.125 ; 4.125 ; Rise       ; clk             ;
+;  led_hex_d[0] ; clk        ; 4.223 ; 4.223 ; Rise       ; clk             ;
+;  led_hex_d[1] ; clk        ; 4.252 ; 4.252 ; Rise       ; clk             ;
+;  led_hex_d[2] ; clk        ; 4.191 ; 4.191 ; Rise       ; clk             ;
+;  led_hex_d[3] ; clk        ; 4.239 ; 4.239 ; Rise       ; clk             ;
+;  led_hex_d[4] ; clk        ; 4.125 ; 4.125 ; Rise       ; clk             ;
+;  led_hex_d[5] ; clk        ; 4.129 ; 4.129 ; Rise       ; clk             ;
+;  led_hex_d[6] ; clk        ; 4.128 ; 4.128 ; Rise       ; clk             ;
++---------------+------------+-------+-------+------------+-----------------+
+
+
++--------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                            ;
++------------------+----------+-------+----------+---------+---------------------+
+; Clock            ; Setup    ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
++------------------+----------+-------+----------+---------+---------------------+
+; Worst-case Slack ; -3.277   ; 0.215 ; N/A      ; N/A     ; -1.631              ;
+;  clk             ; -3.277   ; 0.215 ; N/A      ; N/A     ; -1.631              ;
+; Design-wide TNS  ; -144.085 ; 0.0   ; 0.0      ; 0.0     ; -61.509             ;
+;  clk             ; -144.085 ; 0.000 ; N/A      ; N/A     ; -61.509             ;
++------------------+----------+-------+----------+---------+---------------------+
+
+
++------------------------------------------------------------------------+
+; Setup Times                                                            ;
++------------+------------+-------+-------+------------+-----------------+
+; Data Port  ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++------------+------------+-------+-------+------------+-----------------+
+; cnt_enable ; clk        ; 3.735 ; 3.735 ; Rise       ; clk             ;
+; reset_n    ; clk        ; 6.962 ; 6.962 ; Rise       ; clk             ;
++------------+------------+-------+-------+------------+-----------------+
+
+
++--------------------------------------------------------------------------+
+; Hold Times                                                               ;
++------------+------------+--------+--------+------------+-----------------+
+; Data Port  ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++------------+------------+--------+--------+------------+-----------------+
+; cnt_enable ; clk        ; -0.401 ; -0.401 ; Rise       ; clk             ;
+; reset_n    ; clk        ; -2.497 ; -2.497 ; Rise       ; clk             ;
++------------+------------+--------+--------+------------+-----------------+
+
+
++---------------------------------------------------------------------------+
+; Clock to Output Times                                                     ;
++---------------+------------+-------+-------+------------+-----------------+
+; Data Port     ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++---------------+------------+-------+-------+------------+-----------------+
+; led_hex_a[*]  ; clk        ; 9.102 ; 9.102 ; Rise       ; clk             ;
+;  led_hex_a[0] ; clk        ; 8.194 ; 8.194 ; Rise       ; clk             ;
+;  led_hex_a[1] ; clk        ; 8.189 ; 8.189 ; Rise       ; clk             ;
+;  led_hex_a[2] ; clk        ; 8.187 ; 8.187 ; Rise       ; clk             ;
+;  led_hex_a[3] ; clk        ; 8.719 ; 8.719 ; Rise       ; clk             ;
+;  led_hex_a[4] ; clk        ; 9.102 ; 9.102 ; Rise       ; clk             ;
+;  led_hex_a[5] ; clk        ; 8.541 ; 8.541 ; Rise       ; clk             ;
+;  led_hex_a[6] ; clk        ; 8.231 ; 8.231 ; Rise       ; clk             ;
+; led_hex_b[*]  ; clk        ; 7.812 ; 7.812 ; Rise       ; clk             ;
+;  led_hex_b[0] ; clk        ; 7.736 ; 7.736 ; Rise       ; clk             ;
+;  led_hex_b[1] ; clk        ; 7.435 ; 7.435 ; Rise       ; clk             ;
+;  led_hex_b[2] ; clk        ; 7.473 ; 7.473 ; Rise       ; clk             ;
+;  led_hex_b[3] ; clk        ; 7.471 ; 7.471 ; Rise       ; clk             ;
+;  led_hex_b[4] ; clk        ; 7.774 ; 7.774 ; Rise       ; clk             ;
+;  led_hex_b[5] ; clk        ; 7.780 ; 7.780 ; Rise       ; clk             ;
+;  led_hex_b[6] ; clk        ; 7.812 ; 7.812 ; Rise       ; clk             ;
+; led_hex_c[*]  ; clk        ; 8.312 ; 8.312 ; Rise       ; clk             ;
+;  led_hex_c[0] ; clk        ; 8.072 ; 8.072 ; Rise       ; clk             ;
+;  led_hex_c[1] ; clk        ; 8.296 ; 8.296 ; Rise       ; clk             ;
+;  led_hex_c[2] ; clk        ; 8.282 ; 8.282 ; Rise       ; clk             ;
+;  led_hex_c[3] ; clk        ; 8.281 ; 8.281 ; Rise       ; clk             ;
+;  led_hex_c[4] ; clk        ; 8.312 ; 8.312 ; Rise       ; clk             ;
+;  led_hex_c[5] ; clk        ; 8.029 ; 8.029 ; Rise       ; clk             ;
+;  led_hex_c[6] ; clk        ; 8.061 ; 8.061 ; Rise       ; clk             ;
+; led_hex_d[*]  ; clk        ; 8.921 ; 8.921 ; Rise       ; clk             ;
+;  led_hex_d[0] ; clk        ; 8.885 ; 8.885 ; Rise       ; clk             ;
+;  led_hex_d[1] ; clk        ; 8.921 ; 8.921 ; Rise       ; clk             ;
+;  led_hex_d[2] ; clk        ; 8.789 ; 8.789 ; Rise       ; clk             ;
+;  led_hex_d[3] ; clk        ; 8.895 ; 8.895 ; Rise       ; clk             ;
+;  led_hex_d[4] ; clk        ; 8.580 ; 8.580 ; Rise       ; clk             ;
+;  led_hex_d[5] ; clk        ; 8.575 ; 8.575 ; Rise       ; clk             ;
+;  led_hex_d[6] ; clk        ; 8.574 ; 8.574 ; Rise       ; clk             ;
++---------------+------------+-------+-------+------------+-----------------+
+
+
++---------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                             ;
++---------------+------------+-------+-------+------------+-----------------+
+; Data Port     ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++---------------+------------+-------+-------+------------+-----------------+
+; led_hex_a[*]  ; clk        ; 3.887 ; 3.887 ; Rise       ; clk             ;
+;  led_hex_a[0] ; clk        ; 3.887 ; 3.887 ; Rise       ; clk             ;
+;  led_hex_a[1] ; clk        ; 4.082 ; 4.082 ; Rise       ; clk             ;
+;  led_hex_a[2] ; clk        ; 4.086 ; 4.086 ; Rise       ; clk             ;
+;  led_hex_a[3] ; clk        ; 4.236 ; 4.236 ; Rise       ; clk             ;
+;  led_hex_a[4] ; clk        ; 3.947 ; 3.947 ; Rise       ; clk             ;
+;  led_hex_a[5] ; clk        ; 4.021 ; 4.021 ; Rise       ; clk             ;
+;  led_hex_a[6] ; clk        ; 4.032 ; 4.032 ; Rise       ; clk             ;
+; led_hex_b[*]  ; clk        ; 3.757 ; 3.757 ; Rise       ; clk             ;
+;  led_hex_b[0] ; clk        ; 3.898 ; 3.898 ; Rise       ; clk             ;
+;  led_hex_b[1] ; clk        ; 3.770 ; 3.770 ; Rise       ; clk             ;
+;  led_hex_b[2] ; clk        ; 3.809 ; 3.809 ; Rise       ; clk             ;
+;  led_hex_b[3] ; clk        ; 3.757 ; 3.757 ; Rise       ; clk             ;
+;  led_hex_b[4] ; clk        ; 3.864 ; 3.864 ; Rise       ; clk             ;
+;  led_hex_b[5] ; clk        ; 3.906 ; 3.906 ; Rise       ; clk             ;
+;  led_hex_b[6] ; clk        ; 3.931 ; 3.931 ; Rise       ; clk             ;
+; led_hex_c[*]  ; clk        ; 3.977 ; 3.977 ; Rise       ; clk             ;
+;  led_hex_c[0] ; clk        ; 3.997 ; 3.997 ; Rise       ; clk             ;
+;  led_hex_c[1] ; clk        ; 4.099 ; 4.099 ; Rise       ; clk             ;
+;  led_hex_c[2] ; clk        ; 4.080 ; 4.080 ; Rise       ; clk             ;
+;  led_hex_c[3] ; clk        ; 4.085 ; 4.085 ; Rise       ; clk             ;
+;  led_hex_c[4] ; clk        ; 4.106 ; 4.106 ; Rise       ; clk             ;
+;  led_hex_c[5] ; clk        ; 3.977 ; 3.977 ; Rise       ; clk             ;
+;  led_hex_c[6] ; clk        ; 3.977 ; 3.977 ; Rise       ; clk             ;
+; led_hex_d[*]  ; clk        ; 4.125 ; 4.125 ; Rise       ; clk             ;
+;  led_hex_d[0] ; clk        ; 4.223 ; 4.223 ; Rise       ; clk             ;
+;  led_hex_d[1] ; clk        ; 4.252 ; 4.252 ; Rise       ; clk             ;
+;  led_hex_d[2] ; clk        ; 4.191 ; 4.191 ; Rise       ; clk             ;
+;  led_hex_d[3] ; clk        ; 4.239 ; 4.239 ; Rise       ; clk             ;
+;  led_hex_d[4] ; clk        ; 4.125 ; 4.125 ; Rise       ; clk             ;
+;  led_hex_d[5] ; clk        ; 4.129 ; 4.129 ; Rise       ; clk             ;
+;  led_hex_d[6] ; clk        ; 4.128 ; 4.128 ; Rise       ; clk             ;
++---------------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------+
+; Setup Transfers                                                   ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; clk        ; clk      ; 1078     ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-------------------------------------------------------------------+
+; Hold Transfers                                                    ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; clk        ; clk      ; 1078     ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths                            ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 2     ; 2    ;
+; Unconstrained Input Port Paths  ; 79    ; 79   ;
+; Unconstrained Output Ports      ; 28    ; 28   ;
+; Unconstrained Output Port Paths ; 105   ; 105  ;
++---------------------------------+-------+------+
+
+
++------------------------------------+
+; TimeQuest Timing Analyzer Messages ;
++------------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Wed Nov 22 13:48:12 2017
+Info: Command: quartus_sta stoppuhr -c stoppuhr
+Info: qsta_default_script.tcl version: #1
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (21077): Low junction temperature is 0 degrees C
+Info (21077): High junction temperature is 85 degrees C
+Critical Warning (332012): Synopsys Design Constraints File file not found: 'stoppuhr.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332105): Deriving Clocks
+    Info (332105): create_clock -period 1.000 -name clk clk
+Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info: Analyzing Slow Model
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -3.277
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -3.277      -144.085 clk 
+Info (332146): Worst-case hold slack is 0.445
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     0.445         0.000 clk 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -1.631
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.631       -61.509 clk 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info: Analyzing Fast Model
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -0.678
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -0.678       -26.704 clk 
+Info (332146): Worst-case hold slack is 0.215
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     0.215         0.000 clk 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -1.380
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.380       -50.380 clk 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 4 warnings
+    Info: Peak virtual memory: 516 megabytes
+    Info: Processing ended: Wed Nov 22 13:48:13 2017
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:01
+
+

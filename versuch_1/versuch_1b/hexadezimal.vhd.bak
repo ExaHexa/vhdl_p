@@ -1,0 +1,11 @@
+libary ieee;
+use ieee.std_logic_1164.all;
+
+entity hexadezimal is
+	port (
+	
+	
+	);
+end hexadezimal;
+
+architecture

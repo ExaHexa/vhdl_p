@@ -1,0 +1,37 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+entity stoppuhr_bcd is 
+
+	port (
+
+
+
+
+
+	
+		);
+end entity stoppuhr_bcd;
+
+architecture arch of stoppuhr_bcd is
+
+
+
+
+
+
+
+
+
+
+
+end architecture arch;
+	
+	
+	
+	
+	
+	
+	
+	
