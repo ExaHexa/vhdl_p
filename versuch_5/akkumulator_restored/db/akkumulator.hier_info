@@ -1,0 +1,45 @@
+|akkumulator
+d[0] => d_int[0].DATAB
+d[0] => Add0.IN4
+d[0] => Add1.IN4
+d[1] => d_int[1].DATAB
+d[1] => Add0.IN3
+d[1] => Add1.IN3
+d[2] => d_int[2].DATAB
+d[2] => Add0.IN2
+d[2] => Add1.IN2
+d[3] => d_int[3].DATAB
+d[3] => Add0.IN1
+d[3] => Add1.IN1
+ld => d_int[4].OUTPUTSELECT
+ld => d_int[3].OUTPUTSELECT
+ld => d_int[2].OUTPUTSELECT
+ld => d_int[1].OUTPUTSELECT
+ld => d_int[0].OUTPUTSELECT
+sub => z[0].OUTPUTSELECT
+sub => z[1].OUTPUTSELECT
+sub => z[2].OUTPUTSELECT
+sub => z[3].OUTPUTSELECT
+sub => z[4].OUTPUTSELECT
+e => x[0].ENA
+e => x[1].ENA
+e => x[2].ENA
+e => x[3].ENA
+e => x[4].ENA
+clk => x[0].CLK
+clk => x[1].CLK
+clk => x[2].CLK
+clk => x[3].CLK
+clk => x[4].CLK
+c <= x[4].DB_MAX_OUTPUT_PORT_TYPE
+q[0] <= x[0].DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= x[1].DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= x[2].DB_MAX_OUTPUT_PORT_TYPE
+q[3] <= x[3].DB_MAX_OUTPUT_PORT_TYPE
+z_out[0] <= z[0].DB_MAX_OUTPUT_PORT_TYPE
+z_out[1] <= z[1].DB_MAX_OUTPUT_PORT_TYPE
+z_out[2] <= z[2].DB_MAX_OUTPUT_PORT_TYPE
+z_out[3] <= z[3].DB_MAX_OUTPUT_PORT_TYPE
+z_out[4] <= z[4].DB_MAX_OUTPUT_PORT_TYPE
+
+
